@@ -1,0 +1,110 @@
+
+/*经验系统的设计*/
+.pealinfo{
+            float: left; width: 25%; overflow: hidden; background: #FFF; margin: 20px 10px
+        }
+.pealinfo.dark-mode{
+            float: left; width: 25%; overflow: hidden; background: #413f3f; margin: 20px 10px
+        }
+
+    .perara{
+        margin: 10px 10px;
+    }
+     /*评论功能的设计*/
+     .comment_post{
+            width: 750px;
+            margin-left: 30px;
+        }
+        /*展现评论内容*/
+        .comment_show{
+            width: 750px;
+            margin-left: 30px;
+        }
+        /*回复评论的设计*/
+        .fu{
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .funm{
+            font-size: 16px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        /*二级评论*/
+
+        .zi{
+            margin-left: 30px;
+        }
+        .zinm{
+            font-size: 14px;
+            margin-left:30px;
+        }
+        /*评论标题的设计*/
+
+        #commentform_title {
+            padding: 0 0 0 25px;
+            margin-bottom: 10px;
+        }
+        .feedback_area_title {
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+        #container{
+	        margin:0 auto;
+	        width:900px;
+        }
+        /*点赞功能的设计*/
+
+        .heart {
+	        background:url(../image/heart_animation.png);
+	        background-position:left;
+	        background-repeat:no-repeat;
+	        height:100px;
+	        width:100px;
+	        cursor:pointer;
+	        position:absolute;
+	        left:-14px;
+	        background-size:2900%;
+        }
+        .heart:hover, .heart:focus{
+	        background-position:right;
+        }
+
+        @-webkit-keyframes heartBlast {
+	        0% {
+	        	background-position:left;
+	        }
+	        100% {
+		        background-position:right;
+	        }
+        }
+
+        @keyframes heartBlast {
+	        0% {
+	        	background-position:left;
+	        }
+	        100% {
+	        	background-position:right;
+	        }
+        }
+        /*爱心的动画的设计*/
+
+        .heartAnimation {
+	        display:inline-block;
+	        -webkit-animation-name:heartBlast;
+	        animation-name:heartBlast;
+	        -webkit-animation-duration:.8s;
+	        animation-duration:.8s;
+	        -webkit-animation-iteration-count:1;
+	        animation-iteration-count:1;
+	        -webkit-animation-timing-function:steps(28);
+	        animation-timing-function:steps(28);
+	        background-position:right;
+        }
+        .feed p{font-family:"Microsoft YaHei",'Georgia', Times, Times New Roman, serif; font-size:25px;}
+        .feed{clear:both; margin-bottom:20px; height:150px; position:relative;}
+        .likeCount{font-family:'Georgia', Times, Times New Roman, serif; margin-top:32px;margin-left:73px;font-size:25px;color:#999999}
+

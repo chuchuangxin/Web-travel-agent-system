@@ -1,0 +1,186 @@
+@charset "gb2312";
+.body{background: #d2d7d1
+}
+.picshow { width: 100%; overflow: hidden; margin: 0 auto; height: 590px;}/*
+Home page image position and shape settings*/
+/*首页以及其他分页的页面设计以及图片的修改*/
+.picshow img{height:590px; width:1950px;position: relative;z-index: 1}
+.picshow li img { display: block; width: 25%; }
+.picshow li:hover img {  opacity: 1; }
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+*{
+  box-sizing:border-box;
+}
+/*调整body的位置*/
+body{
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  margin-left:0px;
+  font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Roboto, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+}
+.logo path{
+  pointer-events:none;
+  fill:none;
+  stroke-linecap:round;
+  stroke-width:7;
+  stroke:rgb(255, 255, 255);
+}
+
+.text-center{
+  text-align:center;
+}
+
+/*页脚的设计*/
+footer a{
+  color:rgb(68, 68, 68);
+}
+footer a:hover{
+  color:rgb(0, 86, 179);
+}
+.footer-small{
+  padding-top:1em;
+  padding-right:0px;
+  padding-bottom:1em;
+  padding-left:0px;
+}
+.footer-1 .media-container-row{
+  padding-top:10px;
+  padding-right:0px;
+  padding-bottom:10px;
+  padding-left:0px;
+  width:100%;
+  color:rgb(122, 122, 122);
+}
+.footer-1 a{
+  color:rgb(255, 255, 255);
+  text-decoration-line:none;
+  text-decoration-thickness:initial;
+  text-decoration-style:initial;
+  text-decoration-color:initial;
+}
+p{
+  display:block;
+  margin-block-start:1em;
+  margin-block-end:1em;
+  margin-inline-start:0px;
+  margin-inline-end:0px;
+}
+
+footer{
+  font-size:16px;
+}
+
+h3{
+  font-size:18px;
+}
+
+
+* { margin: 0; padding: 0 }
+body { font: 14px Arial, Helvetica, sans-serif; color: #7a7979; background:#f7f7f7; }
+/*body的设计*/
+img { border: 0; display: block }
+/*图片无边框显示*/
+ul, li { list-style: none; }
+/*Homepage background and image border settings */
+a { text-decoration: none; color: #555 }
+/*分隔线*/
+.blank { height: 8px; overflow: hidden; width: 100%; margin: auto; clear: both }
+.blank80 { height: 100px; overflow: hidden; width: 100%; margin: auto; clear: both }
+/*页首的设计*/
+header { background: rgba(0,255,255,0); }
+/*文章显示*/
+article { overflow: hidden }
+/*顶部分栏的设计*/
+.tophead {background: rgba(255,255,255,0.0);  margin: 0 auto 10px; overflow: hidden; position: center }
+/* Top and logo style design */
+
+.tophead.dark-mode {background: rgba(37, 34, 34, 0.05);  margin: 0 auto 10px; overflow: hidden; position: center; color: #e3e2e2
+}
+
+.logo { float: left; overflow: hidden; font-size: 30px; margin-top: 10px; margin-left: 10px }
+.logo a { color: #333 }
+
+article { width: 1200px; margin: auto }
+/*用于放置文章*/
+
+/*看帖的一些功能*/
+.blogs { float: left; width: 70%; overflow: hidden; }
+.blogpic { overflow: hidden; width: 30%; display: block; float: left; margin-right: 20px; border-radius: 5px; ; }
+.blogpic2 { overflow: hidden; width: 30%; display: block; float: left; margin-right: 20px; border-radius: 5px; background: #5a646c;color:#5a646c; }
+.blogpic img { width: 25%;color: #5a646c;}
+.blogpic2 img { width: 25%;color: #5a646c;}
+.bloginfo p { color: #888; line-height: 24px }
+
+/*夜间模式*/
+.dark-mode{
+ background: rgba(37, 34, 34, 0.89);
+transition: 1s all ease;
+  color: #f1f1f1;
+}
+
+/*h3的文章标题*/
+h3.blogtitle { line-height: 30px; height: 30px; margin: 10px 0; }
+/*文章信息显示*/
+.infos { float: left; width: 70%; overflow: hidden; background: #FFF; margin: 20px 0 }
+.infos.dark-mode { float: left; width: 70%; overflow: hidden;transition: 1s all ease; background: rgba(77, 77, 77, 0.89); margin: 20px 0; color: #f1f1f1;}
+
+
+.n1 { background: #5EA51B; }
+/*小方块*/
+/*显示分布式*/
+.autor { width: 100%; overflow: hidden; clear: both; margin: 20px 0 0 0; display: inline-block; color: #838383; font-size: 12px }
+.autor span { margin-right: 10px; padding-left: 20px }
+.autor span a { color: #096; }
+.autor span a:hover { text-decoration: underline }
+
+/*新的视窗*/
+.newsview { padding: 0 30px }
+.news_about { color: #888888; border: 1px solid #F3F3F3; padding: 10px; margin: 20px auto 15px auto; line-height: 23px; background: none repeat 0 0 #F6F6F6; }
+.news_about strong { color: #0770e5; font-weight: 400 !important; font-size: 13px; padding-right: 8px; }
+
+.news_about.dark-mode { color: #efebeb; border: 1px solid #818080; padding: 10px; margin: 20px auto 15px auto; line-height: 23px; background: none repeat 0 0 #4d4c4c; }
+/*新建视窗的作者*/
+.news_author { width: 100%; color: #999; line-height: 18px; }
+.news_author span { margin-right: 10px; padding-left: 20px }
+/*输入栏*/
+.input_text { padding-left: 5px; border: 1px solid #ccc; width: 70%; height: 26px; line-height: 26px; background-color: #f2f2f2; float: left; }
+.input_submit { background-color: #333; color: #FFF; float: left; width: 20%; border: none; cursor: pointer; height: 28px; line-height: 28px; }
+/*tags*/
+/*新建标题*/
+.news_title { font-size: 24px; font-weight: normal; padding: 20px 0; color: #333; }
+
+.news_infos { line-height: 24px; text-align: justify; }
+.news_infos p { margin-bottom: 10px }
+.news_infos img { max-width: 400px; height: 400px; }
+/*侧边小字*/
+h1.t_nav span { float: right; color: #999 }
+h1.t_nav { border-bottom: #bfbfbf 1px solid; font-size: 14px; font-weight: normal; line-height: 40px; width: 100%; overflow: hidden }
+h1.t_nav a { width: 100px; display: block; text-align: center; color: #fff; float: left }
+/*readmore的放置位置*/
+.readmore { float: right; }
+
+
+.logo img { float: left }
+/*图片以及分栏目的显示*/
+
+.topnav { overflow: hidden; margin: 10px 0; color: #ff0000; font-family: Atlantlgo, sans-serif; font-size: 18px;font-weight: bold; background: rgba(24, 65, 227, 0)
+}
+
+.topnav.dark-mode { overflow: hidden; margin: 10px 0; color: #ff0000; font-family: Atlantlgo, sans-serif; font-size: 18px;font-weight: bold }
+
+.topnav.dark-mode ul li a{color: #ffffff
+}
+
+nav { color: #999; line-height: 32px; }
+nav ul { text-align: right; }
+nav ul li { display: inline; font-size: 16px; padding: 10px 20px; height: 46px; line-height: 46px;  }
