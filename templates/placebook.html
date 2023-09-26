@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" />
+		<link rel="stylesheet" href="css/Site.css" />
+		<link rel="stylesheet" href="css/zy.all.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/amazeui.min.css" />
+		<link rel="stylesheet" href="css/admin.css" />
+         <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/Site.css') }}">
+      <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/zy.all.css') }}">
+	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/font-awesome.min.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/amazeui.min.css') }}">
+         <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/admin.css') }}">
+	</head>
+
+	<body>
+		<div class="dvcontent">
+
+			<div>
+				<!--tab start-->
+				<div class="tabs" style="margin: 30px;">
+					<div class="hd">
+						<ul>
+							<li class="on" style="box-sizing: initial;-webkit-box-sizing: initial;">Flights reservation information</li>
+
+						</ul>
+					</div>
+					<div class="bd">
+						<ul style="display: block;padding: 20px;">
+							<li>
+								<!--分页显示角色信息 start-->
+								<div id="dv1">
+									<table class="table" id="tbRecord">
+										<thead>
+											<tr>
+												<th>No.</th>
+												<th>Full name</th>
+												<th>Reservation quantity</th>
+                                                <th>Unit-price</th>
+												<th>Booking time</th>
+												<th>From</th>
+												<th>To</th>
+												<th>Date</th>
+												<th>User Email</th>
+												<th>User name</th>
+												<th>Edit/Delete</th>
+											</tr>
+										</thead>
+										<tbody>
+
+											 {% for placebook in placebooks %}
+
+											<tr>
+												<td>{{ placebook.id }}</td>
+												<td>{{ placebook.name }}</td>
+												<td>{{ placebook.num }}</td>
+												<td>${{ placebook.place.price }}</td>
+												<td>{{ placebook.create_time }}</td>
+												<td>{{ placebook.Fr }}</td>
+												<td>{{ placebook.To }}</td>
+												<td>{{ placebook.Date }}</td>
+												<td>{{ placebook.author.telephone }}</td>
+												<td>{{ placebook.author.username  }}</td>
+
+												<td class="text-right">
+                            <form  method="post" action="   {{ url_for('placebook_delete',id= placebook.id) }}      ">
+                                <input name="delete" type="submit" value="Delete" onclick="return confirm('确认删除此部门？')" class="btn btn-simple btn-danger btn-icon remove">
+                            </form>
+                            </td>
+											</tr>
+
+										{% endfor %}
+
+
+
+										</tbody>
+
+									</table>
+								</div>
+								<!--分页显示角色信息 end-->
+							</li>
+						</ul>
+						<ul class="theme-popbod dform" style="display: none;">
+								<div class="am-cf admin-main" style="padding-top: 0px;">
+			<!-- content start -->
+
+	<div class="am-cf admin-main" style="padding-top: 0px;">
+		<!-- content start -->
+		<div class="admin-content">
+			<div class="admin-content-body">
+
+				<div class="am-g">
+					<div class="am-u-sm-12 am-u-md-4 am-u-md-push-8">
+
+					</div>
+					<div class="am-u-sm-12 am-u-md-8 am-u-md-pull-4"
+						style="padding-top: 30px;">
+
+
+
+
+											<form class="am-form am-form-horizontal"
+							action="" method="post">
+
+							<div class="am-form-group">
+								<label for="user-name" class="am-u-sm-3 am-form-label">
+									Name</label>
+								<div class="am-u-sm-9">
+									<input type="text" id="user-name" required
+										placeholder="name" name="name">
+										<small>Less than 20 words</small>
+								</div>
+							</div>
+
+
+
+												<div class="am-form-group">
+								<label for="user-name" class="am-u-sm-3 am-form-label">
+									Price</label>
+								<div class="am-u-sm-9">
+									<input type="text" id="price" required
+										placeholder="price" name="price">
+										<small>Less than 20 words</small>
+								</div>
+							</div>
+
+
+
+
+												<div class="am-form-group">
+								<label for="user-name" class="am-u-sm-3 am-form-label">
+									Path</label>
+								<div class="am-u-sm-9">
+									<input type="text" id="path" required
+										placeholder="path" name="path">
+										<small>Less than 20 words</small>
+								</div>
+							</div>
+
+
+
+							<div class="am-form-group">
+								<label for="user-intro" class="am-u-sm-3 am-form-label">
+									Content</label>
+								<div class="am-u-sm-9">
+									<textarea class="" rows="5" id="user-intro" name="content"
+										placeholder="content"></textarea>
+									<small>Less than 250 words</small>
+								</div>
+							</div>
+
+                              <div class="form-group">
+                                     <button class="btn btn-primary ">Add!</button>
+                              </div>
+						</form>
+
+					</div>
+				</div>
+
+		</div>
+		<!-- content end -->
+	</div>
+							<!--添加 end-->
+							<!--end-->
+						</ul>
+					</div>
+				</div>
+				<!--tab end-->
+
+			</div>
+
+
+			 <script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+              <script src="js/plugs/Jqueryplugs.js" type="text/javascript"></script>
+              <script src="js/_layout.js"></script>
+             <script src="js/plugs/jquery.SuperSlide.source.js"></script>
+                  <script src="{{ url_for('static',filename='js/jquery-1.7.2.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/Jqueryplugs.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/_layout.js')}}"></script>
+                  <script src="{{ url_for('static',filename='js/jquery.SuperSlide.source.js')}}"></script>
+			<script>
+				var num = 1;
+				$(function() {
+
+				 $(".tabs").slide({ trigger: "click" });
+
+				});
+
+
+				var btn_save = function() {
+					var pid = $("#RawMaterialsTypePageId  option:selected").val();
+					var name = $("#RawMaterialsTypeName").val();
+					var desc = $("#RawMaterialsTypeDescription").val();
+					var ramark = $("#Ramark").val();
+					$.ajax({
+						type: "post",
+						url: "/RawMaterialsType/AddRawMaterialsType",
+						data: { name: name, pid: pid, desc: desc, ramark: ramark },
+						success: function(data) {
+							if(data > 0) {
+								$.jq_Alert({
+									message: "Add successfully",
+									btnOktext: "OK",
+									dialogModal: true,
+									btnOkClick: function() {
+										//$("#RawMaterialsTypeName").val("");
+										//$("#RawMaterialsTypeDescription").val("");
+										//$("#Ramark").val("");
+										//page1();
+										location.reload();
+
+									}
+								});
+							}
+						}
+					});
+					alert(t);
+				}
+
+				var btn_edit = function(id) {
+					$.jq_Panel({
+						url: "/RawMaterialsType/EditRawMaterialsType?id=" + id,
+						title: "Edit",
+						dialogModal: true,
+						iframeWidth: 500,
+						iframeHeight: 400
+					});
+				}
+				var btn_delete = function(id) {
+					$.jq_Confirm({
+						message: "Delete?",
+						btnOkClick: function() {
+
+						}
+					});
+				}
+			</script>
+
+		</div>
+	</body>
+
+</html>

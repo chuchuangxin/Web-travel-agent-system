@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/open-iconic-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/aos.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/ionicons.min.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='href="css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/jquery.timepicker.css') }}">
+
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+      <style>
+        .bar li {width: 100px;height: 30px; text-align: center; line-height: 30px; transition: 0.3s;}
+        .bar li:hover{background-color: #ccc;}
+        .toggle{position: absolute; top: 50px; right: 50px;}
+    </style>
+  </head>
+  <body>
+
+
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+            <button type="button" class="toggle" id="button">English</button>
+	      <a class="navbar-brand" href="{{ url_for('index') }}">Oliveira</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="{{ url_for('about') }}"  class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="{{ url_for('place') }}" class="nav-link">Places</a></li>
+	          <li class="nav-item"><a href="{{ url_for('hotel') }}" class="nav-link">Hotels</a></li>
+	         <li class="nav-item"><a href="{{ url_for('blog') }}" class="nav-link">Calendar</a></li>
+	          <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
+                <li class="nav-item active"><a href="{{ url_for('indexz') }}" class="nav-link">+Blog</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <div class="hero-wrap js-fullheight" style="background-image: url('/static/images/destination-5.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="{{ url_for('index') }}">Home</a></span> <span>Blog</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="{{ url_for('question') }}">+Blog</a></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<div class="row">
+   <div class="col-md-8 ftco-animate">
+
+     <div class="row d-flex" STYLE="margin-left: 60px">
+
+        {% for question in questions %}
+
+            <div class="col-md-4 d-flex ftco-animate"style="margin-top: 75px" >
+            <div class="blog-entry align-self-stretch">
+              <a href="{{ url_for('detail',question_id=question.id) }}" class="block-20" style="background-image: url('/static/images/image_5.jpg');">
+              </a>
+              <div class="text">
+              	<span class="tag">Tips, Travel</span>
+                <h3 class="heading mt-3"><a href="{{ url_for('detail',question_id=question.id) }}">{{ question.title }}</a></h3>
+                <div class="meta mb-3">
+                  <div><a href="#">{{ question.create_time }}</a></div>
+                  <div><a href="#">{{ question.author.username }}</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span>{{ question.answers|length }}</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        {% endfor %}
+
+     </div>
+    </div>
+
+    <div class="col-md-4 sidebar ftco-animate">
+
+
+
+            <div class="sidebar-box" style="margin-top: 100px">
+              <form method="get" action="{{ url_for('search') }}" class="search-form" style="margin-right: 170px">
+                <div class="form-group">
+
+                  <input name="q" type="text" class="form-control" placeholder="Type a keyword and hit enter">
+                    <button type="submit" class="btn btn-default">Search!</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="sidebar-box ftco-animate">
+              <div class="categories" style="margin-right: 170px">
+                <h3>Categories</h3>
+                <li><a href="#">Tour <span>(12)</span></a></li>
+                <li><a href="#">Hotel <span>(22)</span></a></li>
+                <li><a href="#">Coffee <span>(37)</span></a></li>
+                <li><a href="#">Drinks <span>(42)</span></a></li>
+                <li><a href="#">Foods <span>(14)</span></a></li>
+                <li><a href="#">Travel <span>(140)</span></a></li>
+              </div>
+            </div>
+
+
+
+            <div class="sidebar-box ftco-animate" >
+              <h3>Tag Cloud</h3>
+              <div class="tagcloud" style="margin-right: 170px">
+                <a href="#" class="tag-cloud-link">dish</a>
+                <a href="#" class="tag-cloud-link">menu</a>
+                <a href="#" class="tag-cloud-link">food</a>
+                <a href="#" class="tag-cloud-link">sweet</a>
+                <a href="#" class="tag-cloud-link">tasty</a>
+                <a href="#" class="tag-cloud-link">delicious</a>
+                <a href="#" class="tag-cloud-link">desserts</a>
+                <a href="#" class="tag-cloud-link">drinks</a>
+              </div>
+            </div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+              <h2>Subcribe to our Newsletter</h2>
+              <p>By choosing us, you can enjoy professional and convenient travel planning services.</p>
+              <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-8">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <input type="submit" value="Subscribe" class="submit px-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Adventure</h2>
+              <p>Travel,in my opinion is a very useful exercise,the mind constantly in the implementation of new activities of the unknown.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Information</h2>
+              <ul class="list-unstyled">
+                <li><a href="{{ url_for('about') }}" class="py-2 d-block">About Us</a></li>
+                <li><a href="#" class="py-2 d-block">Online enquiry</a></li>
+                <li><a href="#" class="py-2 d-block">Call Us</a></li>
+                <li><a href="#" class="py-2 d-block">General enquiries</a></li>
+                <li><a href="#" class="py-2 d-block">Booking Conditions</a></li>
+                <li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
+                <li><a href="#" class="py-2 d-block">Refund policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Experience</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Beach</a></li>
+                <li><a href="#" class="py-2 d-block">Adventure</a></li>
+                <li><a href="#" class="py-2 d-block">Wildlife</a></li>
+                <li><a href="#" class="py-2 d-block">Honeymoon</a></li>
+                <li><a href="#" class="py-2 d-block">Nature</a></li>
+                <li><a href="#" class="py-2 d-block">Party</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Beijing University of Technology, Beijing, China</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+86 1392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">groupoliveira@cudconnect.ie</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/popper.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.easing.1.3.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.waypoints.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.stellar.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/aos.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.animateNumber.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/bootstrap-datepicker.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.timepicker.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/scrollax.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/google-map.js')}}"></script>
+<script src="{{ url_for('static',filename='js/main.js')}}"></script>
+
+  </body>
+</html>

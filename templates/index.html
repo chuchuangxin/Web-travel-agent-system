@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+
+
+      <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/animate.css') }}">
+	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/open-iconic-bootstrap.min.css') }}">
+
+	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.css') }}">
+      <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css') }}">
+	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+
+
+
+
+
+	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/aos.css') }}">
+	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/ionicons.min.css') }}">
+<link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/aos.css') }}">
+	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/ionicons.min.css') }}">
+
+
+	  	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap-datepicker.css') }}">
+	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/jquery.timepicker.css') }}">
+
+
+
+<link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/flaticon.css') }}">
+<link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/icomoon.css') }}">
+	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+	  <style>
+        .bar li {width: 100px;height: 30px; text-align: center; line-height: 30px; transition: 0.3s;}
+        .bar li:hover{background-color: #ccc;}
+        .toggle{position: absolute; top: 50px; right: 50px;}
+    </style>
+
+  </head>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+			<button type="button" class="toggle" id="button">English</button>
+	      <a class="navbar-brand" href="{{ url_for('index') }}">Oliveira</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="{{ url_for('index') }}" class="nav-link" id="home">Home</a></li>
+	          <li class="nav-item"><a href="{{ url_for('about') }}"  class="nav-link" id="about">About</a></li>
+	          <li class="nav-item"><a href="{{ url_for('place') }}" class="nav-link" id="place">Places</a></li>
+	          <li class="nav-item"><a href="{{ url_for('hotel') }}" class="nav-link" id="hotel">Hotels</a></li>
+	          <li class="nav-item"><a href="{{ url_for('blog') }}" class="nav-link" id="calendar">Calendar</a></li>
+	          <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link" id="contact">Contact</a></li>
+              <li class="nav-item"><a href="{{ url_for('indexz') }}" class="nav-link" id="blog">+Blog</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <div class="hero-wrap js-fullheight" style="background-image: url('/static/images/bg_5.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-9 ftco-animate mb-5 pb-5 text-center text-md-left" data-scrollax=" properties: { translateY: '70%' }">
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" id="t11">Discover a new Place</h1>
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" id="t13">Find great places to stay, eat, shop, or visit from local experts</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section justify-content-end ftco-search">
+    	<div class="container-wrap ml-auto">
+    		<div class="row no-gutters">
+          <div class="col-md-12 nav-link-wrap">
+            <div class="nav nav-pills justify-content-center text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Flight</a>
+
+              <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Hotel</a>
+
+              <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Car Rent</a>
+            </div>
+          </div>
+          <div class="col-md-12 tab-wrap">
+            
+            <div class="tab-content p-4 px-5" id="v-pills-tabContent">
+
+              <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+              	<form action="#" class="search-destination">
+              		<div class="row">
+              			<div class="col-md align-items-end">
+              				<div class="form-group">
+              					<label for="#" id="t211">From</label>
+	              				<div class="form-field">
+	              					<div class="icon"><span class="icon-my_location"></span></div>
+					                <input type="text" class="form-control" placeholder="From">
+					              </div>
+				              </div>
+              			</div>
+              			<div class="col-md align-items-end">
+              				<div class="form-group">
+              					<label for="#" id="t212">Where</label>
+              					<div class="form-field">
+	              					<div class="icon"><span class="icon-map-marker"></span></div>
+					                <input type="text" class="form-control" placeholder="Where">
+					              </div>
+				              </div>
+              			</div>
+              			<div class="col-md align-items-end">
+              				<div class="form-group">
+              					<label for="#" id="t213">Check In</label>
+              					<div class="form-field">
+	              					<div class="icon"><span class="icon-map-marker"></span></div>
+					                <input type="text" class="form-control checkin_date" placeholder="Check In">
+					              </div>
+				              </div>
+              			</div>
+              			<div class="col-md align-items-end">
+              				<div class="form-group">
+              					<label for="#" id="t214">Check Out</label>
+              					<div class="form-field">
+	              					<div class="icon"><span class="icon-map-marker"></span></div>
+					                <input type="text" class="form-control checkout_date" placeholder="From">
+					              </div>
+				              </div>
+              			</div>
+              			<div class="col-md align-items-end">
+              				<div class="form-group">
+              					<label for="#" id="t215">Travelers</label>
+              					<div class="form-field">
+	              					<div class="select-wrap">
+			                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+			                      <select name="" id="" class="form-control">
+			                      	<option value="">1</option>
+			                        <option value="">2</option>
+			                        <option value="">3</option>
+			                        <option value="">4</option>
+			                        <option value="">5</option>
+			                      </select>
+			                    </div>
+					              </div>
+				              </div>
+              			</div>
+              			<div class="col-md align-self-end">
+              				<div class="form-group">
+              					<div class="form-field">
+					                <input type="submit" value="Search" class="form-control btn btn-primary">
+					              </div>
+				              </div>
+              			</div>
+              		</div>
+              	</form>
+              </div>
+
+              <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
+              	<form action="#" class="search-destination">
+              		<div class="row">
+              			<div class="col-md align-items-end">
+              				<div class="form-group">
+              					<label for="#" id="t221">Check In</label>
+              					<div class="form-field">
+	              					<div class="icon"><span class="icon-map-marker"></span></div>
+					                <input type="text" class="form-control checkin_date" placeholder="Check In">
+					              </div>
+				              </div>
+              			</div>
+              			<div class="col-md align-items-end">
+              				<div class="form-group">
+              					<label for="#" id="t222">Check Out</label>
+              					<div class="form-field">
+	              					<div class="icon"><span class="icon-map-marker"></span></div>
+					                <input type="text" class="form-control checkout_date" placeholder="From">
+					              </div>
+				              </div>
+              			</div>
+              			<div class="col-md align-items-end">
+              				<div class="form-group">
+              					<label for="#" id="t223">Guest</label>
+              					<div class="form-field">
+	              					<div class="select-wrap">
+			                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+			                      <select name="" id="" class="form-control">
+			                      	<option value="">1</option>
+			                        <option value="">2</option>
+			                        <option value="">3</option>
+			                        <option value="">4</option>
+			                        <option value="">5</option>
+			                      </select>
+			                    </div>
+					              </div>
+				              </div>
+              			</div>
+              			<div class="col-md align-self-end">
+              				<div class="form-group">
+              					<div class="form-field">
+					                <input type="submit" value="Search" class="form-control btn btn-primary">
+					              </div>
+				              </div>
+              			</div>
+              		</div>
+              	</form>
+              </div>
+
+              <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-effect-tab">
+              	<form action="#" class="search-destination">
+              		<div class="row">
+              			<div class="col-md align-items-end">
+              				<div class="form-group">
+              					<label for="#" id="t231">Where</label>
+              					<div class="form-field">
+	              					<div class="icon"><span class="icon-map-marker"></span></div>
+					                <input type="text" class="form-control" placeholder="Where">
+					              </div>
+				              </div>
+              			</div>
+              			<div class="col-md align-items-end">
+              				<div class="form-group">
+              					<label for="#" id="t232">Check In</label>
+              					<div class="form-field">
+	              					<div class="icon"><span class="icon-map-marker"></span></div>
+					                <input type="text" class="form-control checkin_date" placeholder="Check In">
+					              </div>
+				              </div>
+              			</div>
+              			<div class="col-md align-items-end">
+              				<div class="form-group">
+              					<label for="#" id="t233">Check Out</label>
+              					<div class="form-field">
+	              					<div class="icon"><span class="icon-map-marker"></span></div>
+					                <input type="text" class="form-control checkout_date" placeholder="From">
+					              </div>
+				              </div>
+              			</div>
+              			<div class="col-md align-self-end">
+              				<div class="form-group">
+              					<div class="form-field">
+					                <input type="submit" value="Search" class="form-control btn btn-primary">
+					              </div>
+				              </div>
+              			</div>
+              		</div>
+              	</form>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-4">
+    				<div class="intro">
+    					<h3><span id="t81">01 Travel</span></h3>
+    					<p id="t82">Traveling can broaden your horizons, observe rich human landscapes, learn about local culture, food habits and religious beliefs, and make friends.</p>
+    				</div>
+    			</div>
+    			<div class="col-md-4">
+    				<div class="intro">
+    					<h3><span id="t83">02 Experience</span></h3>
+    					<p id="t84">When you travel, you can not only enjoy the scenery, but also taste the food, stay in hotels, listen to stories, experience the food culture around the world, grow your knowledge, see more people, understand more folk culture, and see more scenery to make your heart feel fulfilled.</p>
+    				</div>
+    			</div>
+    			<div class="col-md-4">
+    				<div class="intro">
+    					<h3><span id="t85">03 Relax</span></h3>
+    					<p id="t86">Travel can relax your body and mind, relieve the pressure of work and life, the process of travel is not required to have any psychological burden, can make a person reach a completely relaxed condition, feel the most original joy.</p>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 class="mb-4" id="a11">See our places in VR mode!!!!</h2>
+			  <h2 class="mb-4" id="a11">Click the images below!</h2>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-4 ftco-animate">
+        		<a href="{{ url_for('idle') }}" class="destination-entry img" style="background-image: url(/static/images/destination-1.jpg);">
+        			<div class="text text-center">
+        				<h3 id="a12">Beachfront Scape VR</h3>
+        			</div>
+        		</a>
+        	</div>
+        	<div class="col-md-4 ftco-animate">
+        		<a href="{{ url_for('sound') }}" class="destination-entry img" style="background-image: url(/static/images/destination-2-1.jpg);">
+        			<div class="text text-center">
+        				<h3 id="a13">Group Holidays VR</h3>
+        			</div>
+        		</a>
+        	</div>
+        	<div class="col-md-4 ftco-animate">
+        		<a href="{{ url_for('ipad') }}" class="destination-entry img" style="background-image: url(/static/images/destination-3.jpg);">
+        			<div class="text text-center">
+        				<h3 id="a14">City Breaks VR</h3>
+        			</div>
+        		</a>
+        	</div>
+        </div>
+    	</div>
+    </section>
+		
+		<section class="ftco-about d-md-flex">
+    	<div class="one-half img" style="background-image: url(/static/images/about.jpg);"></div>
+    	<div class="one-half ftco-animate">
+        <div class="heading-section ftco-animate ">
+          <h2 class="mb-4" id="a21">Oliveira Travel Agency</h2>
+        </div>
+        <div>
+  				<p id="a22">Our aim is to provide the best and most convenient travel service to our users. Let everyone who wants to experience the beauty of this world enjoy the joy of travel.</p>
+  			</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section services-section bg-light">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-yatch"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3" id="a23">Special Activities</h3>
+                <p id="a24">We can offer as many fantastic activities as you can imagine.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-around"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3" id="a25">Travel Arrangements</h3>
+                <p id="a26">We will provide the best and most convenient travel arrangements for our users.</p>
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-compass"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3" id="a27">Private Guide</h3>
+                <p id="a28">We will provide a detailed travel guide for each user.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-map-of-roads"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3" id="a29">Location Manager</h3>
+                <p id="a210">Location Manager will provide users with a service to check the starting and ending points of their trips.</p>
+              </div>
+            </div>      
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="ftco-section">
+    	<div class="container">
+				<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 class="mb-4" id="a31">Most Popular Destination</h2>
+          </div>
+        </div>    		
+    	</div>
+    	<div class="container-fluid">
+
+    		<div class="row">
+
+				{% for place in places %}
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="destination">
+    					<a href="{{ url_for('place_single',place_id=place.id) }}" class="img img-2 d-flex justify-content-center align-items-center" style="background-image:url('/static/images/{{ place.path }}.jpg');">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-link"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<div class="d-flex">
+    							<div class="one">
+		    						<h3><a href="#">{{ place.name }}</a></h3>
+		    						<p class="rate">
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star-o"></i>
+		    							<i class="icon-star-o"></i>
+		    							<span>184 Rating</span>
+		    						</p>
+	    						</div>
+	    						<div class="two">
+	    							<span class="price">${{ place.price }}</span>
+    							</div>
+    						</div>
+    						<p>{{ place.content }}</p>
+    						<p class="days"><span>5 days 4 nights</span></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> {{ place.name }}</span>
+    							<span class="ml-auto"><a href="#">Discover</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+				{% endfor %}
+
+    		</div>
+    	</div>
+    </section>
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(/static/images/bg_1.jpg);" data-stellar-background-ratio="0.5">
+    	<div class="container">
+    		<div class="row justify-content-center">
+    			<div class="col-md-10">
+		    		<div class="row">
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="100000">0</strong>
+		                <span id="a32">Happy Customers</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="40000">0</strong>
+		                <span id="a33">Destination Places</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="87000">0</strong>
+		                <span id="a34">Hotels</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="56400">0</strong>
+		                <span id="a35">Restaurant</span>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+
+
+    <section class="ftco-section">
+    	<div class="container">
+				<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 class="mb-4" id="a41"><strong>Popular</strong> Hotels</h2>
+          </div>
+        </div>    		
+    	</div>
+    	<div class="container-fluid">
+    		<div class="row">
+				{% for hotel in hotels %}
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="destination">
+    					<a href="{{ url_for('hotel_single',hotel_id=hotel.id) }}" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url('/static/images/{{ hotel.path }}.jpg');">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-link"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<div class="d-flex">
+    							<div class="one">
+		    						<h3><a href="#">{{ hotel.name }}</a></h3>
+		    						<p class="rate">
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star-o"></i>
+		    							<span>128 Rating</span>
+		    						</p>
+	    						</div>
+	    						<div class="two">
+	    							<span class="price per-price">${{ hotel.price }}<br><small>/night</small></span>
+    							</div>
+    						</div>
+    						<p>{{ hotel.content }}</p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> {{ hotel.name }}</span>
+    							<span class="ml-auto"><a href="#">Book Now</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+				{% endfor %}
+
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <h2 class="mb-4" id="a42">Our satisfied customer says</h2>
+            <p id="a43">New concept, new service. Guest first, service first. Your choice is our honor.</p>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/static/images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5">This is the best travel platform I've ever used and it worked well to help me book a flight to Hong Kong during the outbreak.</p>
+                    <p class="name">Mark Web</p>
+                    <span class="position">From Norway</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/static/images/person_2.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5">I managed to book the most suitable hotel and flight through the various information provided by the platform and had a great trip.</p>
+                    <p class="name">Luis Johnson</p>
+                    <span class="position">From Scotland</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/static/images/person_3.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5">This platform has top-notch service and when my flight was cancelled due to the outbreak, the platform quickly booked me on the next viable flight.</p>
+                    <p class="name">Paul Waggoner</p>
+                    <span class="position">UI Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/static/images/person_4.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5">The platform is simple and easy to use, even for first time users.</p>
+                    <p class="name">Blake Richardson</p>
+                    <span class="position">From Canada</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/static/images/person_5.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5">The simplicity of the booking page and the abundance of information on hotels and destinations provided a great convenience for my travel planning.</p>
+                    <p class="name">Dan Briggs</p>
+                    <span class="position">From USA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section">
+    	<div class="container">
+				<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 class="mb-4" id="a51">Recommended Restaurants</h2>
+          </div>
+        </div>    		
+    		<div class="row">
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="destination">
+    					<a href="{{ url_for('indexz') }}" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(/static/images/restaurant-1.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-link"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<h3><a href="{{ url_for('indexz') }}">Echo Restaurant</a></h3>
+    						<p class="rate">
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star-o"></i>
+    							<span>58 Rating</span>
+    						</p>
+    						<p>Provide a green and healthy diet</p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> San Franciso, USA</span>
+    							<span class="ml-auto"><a href="#">Discover</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="destination d-md-flex flex-column-reverse">
+    					<a href="{{ url_for('indexz') }}" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(/static/images/restaurant-2.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-link"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<h3><a href="{{ url_for('indexz') }}">Bridges Restaurant</a></h3>
+    						<p class="rate">
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<span>101 Rating</span>
+    						</p>
+    						<p>The restaurant is a fusion of American tavern style and a variety of light meals.</p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> New York, USA</span>
+    							<span class="ml-auto"><a href="#">Book Now</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="destination">
+    					<a href="{{ url_for('indexz') }}" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(/static/images/restaurant-3.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-link"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<h3><a href="{{ url_for('indexz') }}">Fifteen Restaurant</a></h3>
+    						<p class="rate">
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star-o"></i>
+    							<span>67 Rating</span>
+    						</p>
+    						<p>Serving delicious beef burgers and fries</p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> Totonto, Canada</span>
+    							<span class="ml-auto"><a href="#">Book Now</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="destination d-md-flex flex-column-reverse">
+    					<a href="{{ url_for('indexz') }}" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(/static/images/restaurant-4.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-link"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<h3><a href="{{ url_for('indexz') }}">River Restaurant</a></h3>
+    						<p class="rate">
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<span>133 Rating</span>
+    						</p>
+    						<p>Customers are able to enjoy the riverside scenery while tasting delicious seafood.</p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> London, England</span>
+    							<span class="ml-auto"><a href="#">Book Now</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 id="a52"><strong>Tips</strong> &amp; Articles</h2>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry align-self-stretch">
+              <a href="{{ url_for('indexz') }}" class="block-20" style="background-image: url('/static/images/image_1.jpg');">
+              </a>
+              <div class="text">
+              	<span class="tag">Tips, Travel</span>
+                <h3 class="heading mt-3"><a href="{{ url_for('indexz') }}">8 Best homestay in Philippines that you don't miss out</a></h3>
+                <div class="meta mb-3">
+                  <div><a href="#">October 3, 2019</a></div>
+                  <div><a href="#">Brian Hunter</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 1</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry align-self-stretch">
+              <a href="{{ url_for('indexz') }}" class="block-20" style="background-image: url('/static/images/image_2.jpg');">
+              </a>
+              <div class="text">
+              	<span class="tag">Culture</span>
+                <h3 class="heading mt-3"><a href="{{ url_for('indexz') }}">How to make a perfect travel plan in a short time</a></h3>
+                <div class="meta mb-3">
+                  <div><a href="#">November 13, 2021</a></div>
+                  <div><a href="#">David Simons</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 2</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry align-self-stretch">
+              <a href="{{ url_for('indexz') }}" class="block-20" style="background-image: url('/static/images/image_3.jpg');">
+              </a>
+              <div class="text">
+              	<span class="tag">Tips, Travel</span>
+                <h3 class="heading mt-3"><a href="{{ url_for('indexz') }}">How to choose a summer resort in the summer</a></h3>
+                <div class="meta mb-3">
+                  <div><a href="#">October 13, 2022</a></div>
+                  <div><a href="#">Bruno Sancez</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+		<section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+              <h2 id="t31">Subcribe to our Newsletter</h2>
+              <p id="t32">By choosing us, you can enjoy professional and convenient travel planning services.</p>
+              <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-8">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <input type="submit" value="Subscribe" class="submit px-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2" id="t41">Adventure</h2>
+              <p id="t42">Travel,in my opinion is a very useful exercise,the mind constantly in the implementation of new activities of the unknown.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2" id="t51">Information</h2>
+              <ul class="list-unstyled">
+                <li><a href="{{ url_for('about') }}" class="py-2 d-block" id="t52">About Us</a></li>
+                <li><a href="#" class="py-2 d-block" id="t53">Online enquiry</a></li>
+                <li><a href="#" class="py-2 d-block" id="t54">Call Us</a></li>
+                <li><a href="#" class="py-2 d-block" id="t55">General enquiries</a></li>
+                <li><a href="#" class="py-2 d-block" id="t56">Booking Conditions</a></li>
+                <li><a href="#" class="py-2 d-block" id="t57">Privacy and Policy</a></li>
+                <li><a href="#" class="py-2 d-block" id="t58">Refund policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2" id="t61">Experience</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block" id="t62">Beach</a></li>
+                <li><a href="#" class="py-2 d-block" id="t63">Adventure</a></li>
+                <li><a href="#" class="py-2 d-block" id="t64">Wildlife</a></li>
+                <li><a href="#" class="py-2 d-block" id="t65">Honeymoon</a></li>
+                <li><a href="#" class="py-2 d-block" id="t66">Nature</a></li>
+                <li><a href="#" class="py-2 d-block" id="t67">Party</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2" id="t71">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text" id="t72">Beijing University of Technology, Beijing, China</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+86 1392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">groupoliveira@cudconnect.ie</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+	  <script>
+        var lang_flag = 0;   //lang_flag 作为语言类型的标识，0代表中文，1代表英语
+        var button = ['English', '中文'];
+        var home = ['Home', '主页'];
+        var about = ['About', '关于'];
+        var place = ['Places', '地点'];
+        var hotel = ['Hotels', '酒店'];
+        var calendar = ['Calendar', '日历'];
+        var contact = ['Contact', '联系我们'];
+        var blog = ['+Blog', '+博客'];
+
+		var t11 = ['Discover a new Place', '发现一个新的地方'];
+        var t13 = ['Find great places to stay, eat, shop, or visit from local experts', '从当地专家那里找到住宿、吃饭、购物或参观的好地方'];
+
+		var t21 = ['Flight', '航班'];
+        var t22 = ['Hotel', '酒店'];
+        var t23 = ['Car Rent', '车辆租借'];
+
+		var t211 = ['From', '出发地'];
+        var t212 = ['Where', '目的地'];
+        var t213 = ['Check in', '出发时间'];
+        var t214 = ['Check Out', '到达时间'];
+        var t215 = ['Travelers', '旅行人数'];
+
+		var t221 = ['Check in', '入住时间'];
+        var t222 = ['Check Out', '离开时间'];
+        var t223 = ['Guest', '入住人数'];
+
+		var t231 = ['Where', '租借地点'];
+        var t232 = ['Check in', '租借时间'];
+        var t233 = ['Check Out', '退还时间'];
+
+		var t81 = ['01 Travel', '01 旅行'];
+        var t82 = ['Traveling can broaden your horizons, observe rich human landscapes, learn about local culture, food habits and religious beliefs, and make friends.', '旅行可以开阔你的视野，观察丰富的人文景观，了解当地的文化，饮食习惯和宗教信仰，结交朋友。'];
+        var t83 = ['02 Experience', '02 经历'];
+        var t84 = ['When you travel, you can not only enjoy the scenery, but also taste the food, stay in hotels, listen to stories, experience the food culture around the world, grow your knowledge, see more people, understand more folk culture, and see more scenery to make your heart feel fulfilled.', '当你旅行的时候，你不仅可以欣赏风景，还可以品尝食物，住酒店，听故事，体验世界各地的饮食文化，增长你的知识，看到更多的人，了解更多的民俗文化，看到更多的风景，让你的内心感到满足。'];
+        var t85 = ['03 Relax', '03 放松'];
+        var t86 = ['Travel can relax your body and mind, relieve the pressure of work and life, the process of travel is not required to have any psychological burden, can make a person reach a completely relaxed condition, feel the most original joy.', '旅行可以放松身心，缓解工作和生活的压力，旅行的过程不需要有任何心理负担，可以使人达到完全放松的状态，感受到最原始的快乐。'];
+
+		var a11 = ['See our latest vacation ideas', '看看我们最新的度假计划'];
+        var a12 = ['Beachfront Scape', '海边度假'];
+        var a13 = ['Group Holidays', '组队度假'];
+        var a14 = ['City Breaks', '城市度假'];
+
+		var a21 = ['Oliveira Travel Agency', 'Oliveira旅行社'];
+        var a22 = ['Our aim is to provide the best and most convenient travel service to our users. Let everyone who wants to experience the beauty of this world enjoy the joy of travel.', '我们的宗旨是为用户提供最优质、最便捷的旅游服务。让每一个想要体验这个世界之美的人，享受旅行的乐趣。'];
+        var a23 = ['Special Activities', '特殊活动'];
+        var a24 = ['We can offer as many fantastic activities as you can imagine.', '我们可以提供尽可能多的精彩活动，只要你能想象。'];
+        var a25 = ['Travel Arrangements', '旅行安排'];
+        var a26 = ['We will provide the best and most convenient travel arrangements for our users.', '我们将为用户提供最好、最方便的出行安排。'];
+        var a27 = ['Private Guide', '私人导游'];
+        var a28 = ['We will provide a detailed travel guide for each user.', '我们将为每位用户提供详细的旅行指南。'];
+		var a29 = ['Location Manager', '位置管理器'];
+        var a210 = ['Location Manager will provide users with a service to check the starting and ending points of their trips.', '位置管理器将为用户提供一项服务，以检查他们旅行的起点和终点。'];
+
+		var a31 = ['Most Popular Destination', '最受欢迎目的地'];
+        var a32 = ['Happy Customers', '喜欢的客户'];
+        var a33 = ['Destination Places', '目的地'];
+        var a34 = ['Hotels', '酒店'];
+        var a35 = ['Restaurant', '餐厅'];
+
+		var a41 = ['Popular Hotels', '受欢迎的酒店'];
+        var a42 = ['Our satisfied customer says', '满意的客户说'];
+        var a43 = ['New concept, new service. Guest first, service first. Your choice is our honor.', '新概念，新服务。客人至上，服务至上。您的选择是我们的荣幸。'];
+
+		var a51 = ['Recommended Restaurants', '推荐的餐厅'];
+        var a52 = ['Tips & Articles', '提示 & 文章'];
+
+        var t31 = ['Subcribe to our Newsletter', '订阅我们的时事通讯'];
+        var t32 = ['By choosing us, you can enjoy professional and convenient travel planning services.', '选择我们，您将享受到专业便捷的旅游规划服务。'];
+
+        var t41 = ['Adventure', '冒险'];
+        var t42 = ['Travel,in my opinion is a very useful exercise,the mind constantly in the implementation of new activities of the unknown.', '旅行，在我看来是一种非常有益的锻炼，使心灵不断地在实施新的未知活动。'];
+
+        var t51 = ['Information', '信息'];
+        var t52 = ['About Us', '关于我们'];
+        var t53 = ['Online enquiry', '在线查询'];
+        var t54 = ['Call Us', '打电话给我们'];
+        var t55 = ['General enquiries', '一般的询问'];
+        var t56 = ['Booking Conditions', '预订情况'];
+        var t57 = ['Privacy and Policy', '私隐及政策'];
+        var t58 = ['Refund policy', '退款政策'];
+
+        var t61 = ['Experience', '经验'];
+        var t62 = ['Beach', '海滩'];
+        var t63 = ['Adventure', '冒险'];
+        var t64 = ['Wildlife', '野生动物'];
+        var t65 = ['Honeymoon', '蜜月'];
+        var t66 = ['Nature', '自然'];
+        var t67 = ['Party', '聚会'];
+
+        var t71 = ['Have a Questions?', '有问题?'];
+        var t72 = ['Beijing University of Technology, Beijing, China', '北京工业大学，中国北京'];
+
+        var toggle = document.getElementsByClassName("toggle")[0];
+        toggle.onclick  = function(){
+            (lang_flag === 0) ? (lang_flag = 1) : (lang_flag = 0)  //三元运算符
+            toggleLan();
+        }
+
+        function toggleLan() {
+            console.log(button[lang_flag]);
+            document.getElementById("button").innerHTML = button[lang_flag]
+            document.getElementById("home").innerHTML = home[lang_flag]
+            document.getElementById("about").innerHTML = about[lang_flag]
+            document.getElementById("place").innerHTML = place[lang_flag]
+            document.getElementById("hotel").innerHTML = hotel[lang_flag]
+            document.getElementById("calendar").innerHTML = calendar[lang_flag]
+            document.getElementById("contact").innerHTML = contact[lang_flag]
+            document.getElementById("blog").innerHTML = blog[lang_flag]
+
+			document.getElementById("t11").innerHTML = t11[lang_flag]
+            document.getElementById("t13").innerHTML = t13[lang_flag]
+
+			document.getElementById("v-pills-1-tab").innerHTML = t21[lang_flag]
+            document.getElementById("v-pills-2-tab").innerHTML = t22[lang_flag]
+            document.getElementById("v-pills-3-tab").innerHTML = t23[lang_flag]
+
+			document.getElementById("t211").innerHTML = t211[lang_flag]
+            document.getElementById("t212").innerHTML = t212[lang_flag]
+            document.getElementById("t213").innerHTML = t213[lang_flag]
+            document.getElementById("t214").innerHTML = t214[lang_flag]
+            document.getElementById("t215").innerHTML = t215[lang_flag]
+
+			document.getElementById("t221").innerHTML = t221[lang_flag]
+            document.getElementById("t222").innerHTML = t222[lang_flag]
+            document.getElementById("t223").innerHTML = t223[lang_flag]
+
+			document.getElementById("t231").innerHTML = t231[lang_flag]
+            document.getElementById("t232").innerHTML = t232[lang_flag]
+            document.getElementById("t233").innerHTML = t233[lang_flag]
+
+			document.getElementById("t81").innerHTML = t81[lang_flag]
+            document.getElementById("t82").innerHTML = t82[lang_flag]
+            document.getElementById("t83").innerHTML = t83[lang_flag]
+            document.getElementById("t84").innerHTML = t84[lang_flag]
+            document.getElementById("t85").innerHTML = t85[lang_flag]
+            document.getElementById("t86").innerHTML = t86[lang_flag]
+
+			document.getElementById("a11").innerHTML = a11[lang_flag]
+            document.getElementById("a12").innerHTML = a12[lang_flag]
+            document.getElementById("a13").innerHTML = a13[lang_flag]
+            document.getElementById("a14").innerHTML = a14[lang_flag]
+
+			document.getElementById("a21").innerHTML = a21[lang_flag]
+            document.getElementById("a22").innerHTML = a22[lang_flag]
+            document.getElementById("a23").innerHTML = a23[lang_flag]
+            document.getElementById("a24").innerHTML = a24[lang_flag]
+			document.getElementById("a25").innerHTML = a25[lang_flag]
+            document.getElementById("a26").innerHTML = a26[lang_flag]
+            document.getElementById("a27").innerHTML = a27[lang_flag]
+            document.getElementById("a28").innerHTML = a28[lang_flag]
+			document.getElementById("a29").innerHTML = a29[lang_flag]
+            document.getElementById("a210").innerHTML = a210[lang_flag]
+
+			document.getElementById("a31").innerHTML = a31[lang_flag]
+            document.getElementById("a32").innerHTML = a32[lang_flag]
+            document.getElementById("a33").innerHTML = a33[lang_flag]
+            document.getElementById("a34").innerHTML = a34[lang_flag]
+			document.getElementById("a35").innerHTML = a35[lang_flag]
+
+			document.getElementById("a41").innerHTML = a41[lang_flag]
+            document.getElementById("a42").innerHTML = a42[lang_flag]
+            document.getElementById("a43").innerHTML = a43[lang_flag]
+
+			document.getElementById("a51").innerHTML = a51[lang_flag]
+            document.getElementById("a52").innerHTML = a52[lang_flag]
+
+            document.getElementById("t31").innerHTML = t31[lang_flag]
+            document.getElementById("t32").innerHTML = t32[lang_flag]
+            document.getElementById("t41").innerHTML = t41[lang_flag]
+            document.getElementById("t42").innerHTML = t42[lang_flag]
+
+            document.getElementById("t51").innerHTML = t51[lang_flag]
+            document.getElementById("t52").innerHTML = t52[lang_flag]
+            document.getElementById("t53").innerHTML = t53[lang_flag]
+            document.getElementById("t54").innerHTML = t54[lang_flag]
+            document.getElementById("t55").innerHTML = t55[lang_flag]
+            document.getElementById("t56").innerHTML = t56[lang_flag]
+            document.getElementById("t57").innerHTML = t57[lang_flag]
+            document.getElementById("t58").innerHTML = t58[lang_flag]
+
+            document.getElementById("t61").innerHTML = t61[lang_flag]
+            document.getElementById("t62").innerHTML = t62[lang_flag]
+            document.getElementById("t63").innerHTML = t63[lang_flag]
+            document.getElementById("t64").innerHTML = t64[lang_flag]
+            document.getElementById("t65").innerHTML = t65[lang_flag]
+            document.getElementById("t66").innerHTML = t66[lang_flag]
+            document.getElementById("t67").innerHTML = t67[lang_flag]
+
+            document.getElementById("t71").innerHTML = t71[lang_flag]
+            document.getElementById("t72").innerHTML = t72[lang_flag]
+                }
+    </script>
+ <script src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/popper.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.easing.1.3.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.waypoints.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.stellar.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/aos.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.animateNumber.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/bootstrap-datepicker.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.timepicker.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/scrollax.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/google-map.js')}}"></script>
+<script src="{{ url_for('static',filename='js/main.js')}}"></script>
+
+
+    
+  </body>
+</html>

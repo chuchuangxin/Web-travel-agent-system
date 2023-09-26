@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>@ViewBag.Title</title>
+
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/Site.css') }}">
+      <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/zy.layout.css') }}">
+	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/zy.form.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/font-awesome.min.css') }}">
+
+		<link href="css/Site.css" rel="stylesheet" type="text/css" />
+		<link href="css/zy.layout.css" rel="stylesheet" />
+		<link href="css/zy.form.css" rel="stylesheet" />
+		<link href="css/font-awesome.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.headerlitooleulsubitem_gray {
+				background-Color: White;
+				position: absolute;
+				border-left: 1px solid #BCD4E5;
+				border-right: 1px solid #BCD4E5;
+				border-bottom: 1px solid #BCD4E5;
+				box-shadow: 0px 0px 5px #BCD4E5;
+				width: 230px;
+				margin-left: -170px;
+				color: Black;
+				display: none;
+			}
+			
+			.headerlitooleulsubitem_red {
+				background-Color: White;
+				position: absolute;
+				border-left: 1px solid #E5BCD4;
+				border-right: 1px solid #E5BCD4;
+				border-bottom: 1px solid #E5BCD4;
+				box-shadow: 0px 0px 5px #E5BCD4;
+				width: 230px;
+				margin-left: -170px;
+				color: Black;
+				display: none;
+			}
+			
+			.headerlitooleulsubitem_gray>li,
+			.headerlitooleulsubitem_red>li {
+				height: 45px;
+				background-color: White;
+				padding: 0px 10px;
+				border-bottom: 1px solid #E4ECF3;
+				font-size: 14px;
+				line-height: 26px;
+			}
+			
+			.headerlitoolelisubitemtitle_gray {
+				height: 35px !important;
+				line-height: 35px !important;
+				background-color: #ECF2F7 !important;
+				margin: 0px !important;
+				color: #8090A0 !important;
+				font-size: 14px;
+				font-weight: bold;
+				border-bottom: 1px solid #BCD4E5 !important;
+			}
+			
+			.headerlitoolelisubitemtitle_red {
+				height: 35px !important;
+				line-height: 35px !important;
+				background-color: #F7ECF2 !important;
+				margin: 0px !important;
+				color: #B471A0 !important;
+				font-size: 14px;
+				font-weight: bold;
+				border-bottom: 1px solid #E5BCD4 !important;
+			}
+			
+			.headerlitooleulsubitem_gray>li:hover {
+				background-Color: #F4F9FC;
+			}
+			
+			.headerlitooleulsubitem_red>li:hover {
+				background-color: #FCF4F9;
+			}
+			
+			.ulsubitemitems>li {
+				float: left;
+				height: 20px;
+				font-size: 13px;
+				font-weight: normal !important;
+				color: #555 !important;
+			}
+			
+			.ulsubitemitems>li:last-child {
+				clear: both;
+				width: 100%;
+				height: 10px;
+				margin-top: 8px;
+				background-color: #DADADA;
+			}
+			
+			.headerlitools_info {
+				background-color: #0a318d;
+				height: 45px;
+				padding: 0px 10px;
+				width: 135px;
+			}
+			
+			.headeruserface {
+				background-image: url(static/images/logo.png);
+				width: 40px;
+				height: 40px;
+				background-color: white;
+				margin: 2px 10px 2px 2px;
+				border-radius: 20px;
+				float: left;
+			}
+			
+			.headerlitools_ulinfo {
+				background-Color: white;
+				border-left: 1px solid #D1D1D1;
+				border-right: 1px solid #D1D1D1;
+				border-bottom: 1px solid #D1D1D1;
+				box-shadow: 0px 0px 5px #D1D1D1;
+				width: 160px;
+				margin-left: -20px;
+				color: Black;
+				display: none;
+			}
+			
+			.headerlitools_ulinfo>li {
+				height: 35px;
+				background-color: White;
+				padding: 0px 10px;
+				font-size: 14px;
+				line-height: 36px;
+			}
+			
+			.headerlitools_ulinfo>li:hover {
+				background-Color: #FEE188;
+			}
+			
+			.dvcontent {
+				padding: 0px 20px;
+				margin: 45px auto 0px auto;
+				overflow: auto;
+			}
+			
+			.dvpagerecord {
+				padding: 6px 12px;
+				background-color: #EAEFF2;
+				color: #2283C5;
+				float: left;
+				border: 1px solid #D9D9D9;
+				text-decoration: underline;
+				font-size: 14px;
+				cursor: pointer;
+			}
+			
+			.dvpagerecord:hover {
+				cursor: pointer;
+			}
+			
+			.dvpagerecord:hover i {
+				text-decoration: underline;
+			}
+			
+			.ulpageRecord {
+				max-width: 165px;
+				float: left;
+				white-space: nowrap;
+				overflow: hidden;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			.ulpageRecord li {
+				margin: 0px;
+				padding: 6px 12px;
+				background-color: #EAEFF2;
+				color: #2283C5;
+				display: inline-block;
+				font-size: 14px;
+				border: 1px solid #D9D9D9;
+			}
+			
+			.ulpageRecord li:hover {
+				text-decoration: underline;
+				cursor: pointer;
+			}
+			
+			.currentPage {
+				background-color: #2468a9 !important;
+				color: white !important;
+			}
+			
+			#warn {
+				width: 300px;
+			}
+			
+			#warn tr {
+				width: 300px;
+				height: 20px;
+			}
+			
+			#warn tr td {
+				width: 90px;
+				height: 20px;
+				text-align: center;
+			}
+			
+			iframe {
+				border: none;
+			}
+		</style>
+		<link href="css/zy.menu.css" rel="stylesheet" />
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='css/zy.menu.css') }}">
+
+		<style>
+        .bar li {width: 100px;height: 30px; text-align: center; line-height: 30px; transition: 0.3s;}
+        .bar li:hover{background-color: #ccc;}
+        .toggle{position: absolute; top: 50px; right: 50px;}
+    </style>
+	</head>
+
+	<body>
+
+		<div class="dvheader">
+			<div class="dvheadertools">
+				<span class="headerspantitle" id="t11">Admin Management</span>
+				<ul class="headerultools">
+					<button type="button" class="toggle" id="button">English</button>
+
+					<li class="headerlitools_info headerlitools" style="background-color: #075597">
+						<div class="headeruserface" style="text-align: center;"><i class="icon-user" style="color: black;font-size: 19px;"></i></div>
+						Admin<i style="margin-left: 8px;" class="icon-caret-down"></i>
+						<ul class="headerlitools_ulinfo">
+
+							<li style="border-top: 1px solid #E4ECF3;">
+								<i class="icon-off" style="margin-right: 10px;"></i>
+								<a style="color: black; text-decoration: none;" id="t12">Log out</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="dvcontent">
+
+			<ul class="ulleftmenu" style="border-right: 1px solid #ddd;">
+
+				<li class="limenuitem">
+					<i class="icon-cog menuicon"></i>Menu<b class="arrow icon-angle-down arrow-down"></b>
+					<ul class="ulleftsubitems">
+						<a href="{{ url_for('type') }}" target="right">
+							<li id="t21">Places</li>
+						</a>
+
+						<a href="{{ url_for('inbound') }}" target="right">
+							<li id="t23">Hotels</li>
+						</a>
+						<a href="{{ url_for('hotelbook') }}" target="right">
+							<li id="t24">Hotels booking</li>
+						</a>
+						<a href="{{ url_for('placebook') }}" target="right">
+							<li id="t25">Places booking</li>
+						</a>
+
+												<a href="{{ url_for('inventory') }}" target="right">
+							<li id="t22">Blogs</li>
+						</a>
+
+												</a>
+							<a href="{{ url_for('message') }}" target="right">
+							<li id="t26">Message</li>
+						</a>
+
+								<a href="{{ url_for('re') }}" target="right">
+							<li id="t27">Replies</li>
+						</a>
+												<a href="{{ url_for('apex') }}" target="right">
+							<li id="t28">Team information</li>
+						</a>
+<!--						<a href="{{ url_for('warning') }}" target="right">-->
+<!--							<li>预警信息设置</li>-->
+<!--						</a>-->
+<!--						<a href="{{ url_for('outBoud') }}" target="right">-->
+<!--							<li>出库管理</li>-->
+<!--						</a>-->
+<!--						<a href="{{ url_for('user') }}" target="right">-->
+<!--							<li>用户管理</li>-->
+<!--						</a>-->
+
+					</ul>
+				</li>
+			</ul>
+			<div style="position: absolute; left: 191px; right: 20px; ">
+				<iframe src="{{ url_for('type') }}" scrolling="no"  width="100%" height="1200" name="right" border="none"></iframe>
+			</div>
+		</div>
+
+		<script>
+        var lang_flag = 0;   //lang_flag 作为语言类型的标识，0代表中文，1代表英语
+        var button = ['English', '中文'];
+
+		var t11 = ['Admin Management', '管理员系统'];
+        var t12 = ['Log out', '登出'];
+
+		var t21 = ['Places', '地点'];
+        var t22 = ['Blogs', '博客'];
+		var t23 = ['Hotels', '酒店'];
+        var t24 = ['Hotels booking', '酒店预订'];
+		var t25 = ['Places booking', '地点预定'];
+		var t26 = ['Message', '信息'];
+        var t27 = ['Replies', '回复'];
+		var t28 = ['Team information', '团队信息'];
+
+
+
+		var toggle = document.getElementsByClassName("toggle")[0];
+        toggle.onclick  = function(){
+            (lang_flag === 0) ? (lang_flag = 1) : (lang_flag = 0)  //三元运算符
+            toggleLan();
+        }
+
+        function toggleLan() {
+            console.log(button[lang_flag]);
+            document.getElementById("button").innerHTML = button[lang_flag]
+
+			document.getElementById("t11").innerHTML = t11[lang_flag]
+            document.getElementById("t12").innerHTML = t12[lang_flag]
+
+			document.getElementById("t21").innerHTML = t21[lang_flag]
+            document.getElementById("t22").innerHTML = t22[lang_flag]
+            document.getElementById("t23").innerHTML = t23[lang_flag]
+            document.getElementById("t24").innerHTML = t24[lang_flag]
+            document.getElementById("t25").innerHTML = t25[lang_flag]
+			document.getElementById("t26").innerHTML = t26[lang_flag]
+            document.getElementById("t27").innerHTML = t27[lang_flag]
+            document.getElementById("t28").innerHTML = t28[lang_flag]
+		}
+    </script>
+
+		<script src="js/jquery-1.7.2.min.js" type="text/javascript"></script>
+		<script src="js/plugs/Jqueryplugs.js" type="text/javascript"></script>
+		<script src="js/_layout.js"></script>
+
+      <script src="{{ url_for('static',filename='js/_layout.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/Jqueryplugs.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery-1.7.2.min.js')}}"></script>
+
+		
+
+	</body>
+
+</html>

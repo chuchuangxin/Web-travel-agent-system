@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/open-iconic-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/aos.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/ionicons.min.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='href="css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/jquery.timepicker.css') }}">
+
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+      <style>
+        .bar li {width: 100px;height: 30px; text-align: center; line-height: 30px; transition: 0.3s;}
+        .bar li:hover{background-color: #ccc;}
+        .toggle{position: absolute; top: 50px; right: 50px;}
+    </style>
+  </head>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+            <button type="button" class="toggle" id="button">English</button>
+	      <a class="navbar-brand" href="{{ url_for('index') }}">Oliveira</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link" id="home">Home</a></li>
+	          <li class="nav-item active"><a href="{{ url_for('about') }}"  class="nav-link" id="about">About</a></li>
+	          <li class="nav-item"><a href="{{ url_for('place') }}" class="nav-link" id="place">Places</a></li>
+	          <li class="nav-item"><a href="{{ url_for('hotel') }}" class="nav-link" id="hotel">Hotels</a></li>
+	          <li class="nav-item"><a href="{{ url_for('blog') }}" class="nav-link" id="calendar">Calendar</a></li>
+	          <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link" id="contact">Contact</a></li>
+                <li class="nav-item"><a href="{{ url_for('indexz') }}" class="nav-link" id="blog">+Blog</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <div class="hero-wrap js-fullheight" style="background-image: url('/static/images/bg_5.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="{{ url_for('index') }}" id="home1">Home</a></span> <span id="about1">About</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" id="aboutus">About Us</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-4">
+    				<div class="intro">
+    					<h3> <span id="one">01 About Our Team</span></h3>
+    					<p id="text1">We are six junior students from Beijing University of Technology, and we believe we can provide a travel platform that our users will enjoy.</p>
+    				</div>
+    			</div>
+    			<div class="col-md-4">
+    				<div class="intro">
+    					<h3><span id="two">02 Contact Email </span></h3>
+    					<p>groupoliveira@ucdconnect.ie</p>
+    				</div>
+    			</div>
+    			<div class="col-md-4">
+    				<div class="intro">
+    					<h3><span id="three">03 Contact phone number</span></h3>
+    					<p>+86 1392 3929 210</p>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(static/images/bg_1.jpg);" data-stellar-background-ratio="0.5">
+    	<div class="container">
+    		<div class="row justify-content-center">
+    			<div class="col-md-10">
+		    		<div class="row">
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="100000">0</strong>
+		                <span id="tag1">Happy Customers</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="40000">0</strong>
+		                <span id="tag2">Destination Places</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="87000">0</strong>
+		                <span id="tag3">Hotels</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18 text-center">
+		              <div class="text">
+		                <strong class="number" data-number="56400">0</strong>
+		                <span id="tag4">Restaurant</span>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
+		
+		<section class="ftco-about d-md-flex">
+    	<div class="one-half img" style="background-image: url(static/images/about.jpg);"></div>
+    	<div class="one-half ftco-animate">
+        <div class="heading-section ftco-animate ">
+          <h2 class="mb-4" id="title2">The Best Travel Agency</h2>
+        </div>
+        <div>
+  				<p id="text2">We have a professional travel platform operation team to provide timely and convenient travel services to our customers. Our software has a simple and easy-to-use interface and user-friendly interactive search and booking and communication functions, allowing users to enjoy the fun of travel.</p>
+  			</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+            <h2 class="mb-4" id="title3">Our satisfied customer says</h2>
+            <p id="text3">New concept, new service. Guest first, service first. Your choice is our honor.</p>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/static/images/person_1.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5" id="comment1">This is the best travel platform I've ever used and it worked well to help me book a flight to Hong Kong during the outbreak.</p>
+                    <p class="name">Mark Web</p>
+                    <span class="position" id="from1">From Norway</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/static/images/person_2.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5" id="comment2">I managed to book the most suitable hotel and flight through the various information provided by the platform and had a great trip.</p>
+                    <p class="name">Luis Johnson</p>
+                    <span class="position" id="from2">From Scotland</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/static/images/person_3.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5" id="comment3">This platform has top-notch service and when my flight was cancelled due to the outbreak, the platform quickly booked me on the next viable flight.</p>
+                    <p class="name">Paul Waggoner</p>
+                    <span class="position" id="from3">UI Designer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/static/images/person_4.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5">The platform is simple and easy to use, even for first time users.</p>
+                    <p class="name">Blake Richardson</p>
+                    <span class="position">From Canada</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap p-4 pb-5">
+                  <div class="user-img mb-5" style="background-image: url(/static/images/person_5.jpg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text">
+                    <p class="mb-5" id="=comment4">The simplicity of the booking page and the abundance of information on hotels and destinations provided a great convenience for my travel planning.</p>
+                    <p class="name">Dan Briggs</p>
+                    <span class="position" id="from4">From USA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section services-section bg-light">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-yatch"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3" id="tag11">Special Activities</h3>
+                <p id="text11">We can offer as many fantastic activities as you can imagine.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-around"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3" id="tag12">Travel Arrangements</h3>
+                <p id="text12">We will provide the best and most convenient travel arrangements for our users.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-compass"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3" id="tag13">Private Guide</h3>
+                <p id="text13">We will provide a detailed travel guide for each user.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-map-of-roads"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3" id="tag14">Location Manager</h3>
+                <p id="text14">Location Manager will provide users with a service to check the starting and ending points of their trips.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+              <h2 id="t31">Subcribe to our Newsletter</h2>
+              <p id="t32">By choosing us, you can enjoy professional and convenient travel planning services.</p>
+              <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-8">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <input type="submit" value="Subscribe" class="submit px-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2" id="t41">Adventure</h2>
+              <p id="t42">Travel,in my opinion is a very useful exercise,the mind constantly in the implementation of new activities of the unknown.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2" id="t51">Information</h2>
+              <ul class="list-unstyled">
+                <li><a href="{{ url_for('about') }}" class="py-2 d-block" id="t52">About Us</a></li>
+                <li><a href="#" class="py-2 d-block" id="t53">Online enquiry</a></li>
+                <li><a href="#" class="py-2 d-block" id="t54">Call Us</a></li>
+                <li><a href="#" class="py-2 d-block" id="t55">General enquiries</a></li>
+                <li><a href="#" class="py-2 d-block" id="t56">Booking Conditions</a></li>
+                <li><a href="#" class="py-2 d-block" id="t57">Privacy and Policy</a></li>
+                <li><a href="#" class="py-2 d-block" id="t58">Refund policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2" id="t61">Experience</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block" id="t62">Beach</a></li>
+                <li><a href="#" class="py-2 d-block" id="t63">Adventure</a></li>
+                <li><a href="#" class="py-2 d-block" id="t64">Wildlife</a></li>
+                <li><a href="#" class="py-2 d-block" id="t65">Honeymoon</a></li>
+                <li><a href="#" class="py-2 d-block" id="t66">Nature</a></li>
+                <li><a href="#" class="py-2 d-block" id="t67">Party</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2" id="t71">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text" id="t72">Beijing University of Technology, Beijing, China</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+86 1392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">groupoliveira@cudconnect.ie</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+      <script>
+        var lang_flag = 0;   //lang_flag 作为语言类型的标识，0代表中文，1代表英语
+        var button = ['English', '中文'];
+        var home = ['Home', '主页'];
+        var about = ['About', '关于'];
+        var place = ['Places', '地点'];
+        var hotel = ['Hotels', '酒店'];
+        var calendar = ['Calendar', '日历'];
+        var contact = ['Contact', '联系我们'];
+        var blog = ['+Blog', '+博客'];
+        var home1 = ['Home', '主页'];
+        var about1 = ['About', '关于'];
+        var aboutus = ['About Us', '关于我们'];
+        var one = ['01 About Our Team', '01 关于我们团队'];
+        var two = ['02 Contact Email', '02 联系邮箱'];
+        var three = ['03 Contact phone number', '03 联系电话'];
+        var text1 = ['We are six junior students from Beijing University of Technology, and we believe we can provide a travel platform that our users will enjoy.', '我们是来自北京工业大学的六个大三学生，我们相信我们可以提供一个用户会喜欢的旅游平台。'];
+
+        var tag1 = ['Happy Customers', '喜欢用户'];
+        var tag2 = ['Destination Places', '目的地点'];
+        var tag3 = ['Hotels', '酒店'];
+        var tag4 = ['Restaurant', '餐厅'];
+        var title2 = ['The Best Travel Agency', '最佳的旅行社'];
+        var text2 = ['We have a professional travel platform operation team to provide timely and convenient travel services to our customers. Our software has a simple and easy-to-use interface and user-friendly interactive search and booking and communication functions, allowing users to enjoy the fun of travel.', '我们拥有专业的旅游平台运营团队，为客户提供及时、便捷的旅游服务。我们的软件具有简单易用的界面和用户友好的交互式搜索和预订沟通功能，让用户享受旅行的乐趣。'];
+        var title3 = ['Our satisfied customer says', '满意的客户说'];
+        var text3 = ['New concept, new service. Guest first, service first. Your choice is our honor.', '新概念，新服务。客人至上，服务至上。您的选择是我们的荣幸。'];
+        var comment1 = ['This is the best travel platform I\'ve ever used and it worked well to help me book a flight to Hong Kong during the outbreak.', '这是我用过的最好的旅游平台，在疫情期间，它很好地帮助我预订了飞往香港的航班。'];
+        var from1 = ['From Norway', '来自挪威'];
+
+        var comment2= ['I managed to book the most suitable hotel and flight through the various information provided by the platform and had a great trip.', '我设法通过平台提供的各种信息预订了最合适的酒店和航班，并度过了一段美好的旅程。'];
+        var from2 = ['From Scotland', '来自苏格兰'];
+        var tag11 = ['Special Activities', '特殊的活动'];
+        var text11 = ['We can offer as many fantastic activities as you can imagine.', '我们可以提供尽可能多的精彩活动，只要你能想象。'];
+        var tag12 = ['Travel Arrangements', '旅行安排'];
+        var text12 = ['We will provide the best and most convenient travel arrangements for our users.', '我们将为用户提供最好、最方便的出行安排。'];
+        var tag13 = ['Private Guide', '私人导游'];
+        var text13 = ['We will provide a detailed travel guide for each user.', '我们将为每位用户提供详细的旅行导游。'];
+        var tag14 = ['Location Manager', '位置管理器'];
+        var text14 = ['Location Manager will provide users with a service to check the starting and ending points of their trips.', '位置管理器将为用户提供一项服务，以检查他们旅行的起点和终点。'];
+
+        var t31 = ['Subcribe to our Newsletter', '订阅我们的时事通讯'];
+        var t32 = ['By choosing us, you can enjoy professional and convenient travel planning services.', '选择我们，您将享受到专业便捷的旅游规划服务。'];
+
+        var t41 = ['Adventure', '冒险'];
+        var t42 = ['Travel,in my opinion is a very useful exercise,the mind constantly in the implementation of new activities of the unknown.', '旅行，在我看来是一种非常有益的锻炼，使心灵不断地在实施新的未知活动。'];
+
+        var t51 = ['Information', '信息'];
+        var t52 = ['About Us', '关于我们'];
+        var t53 = ['Online enquiry', '在线查询'];
+        var t54 = ['Call Us', '打电话给我们'];
+        var t55 = ['General enquiries', '一般的询问'];
+        var t56 = ['Booking Conditions', '预订情况'];
+        var t57 = ['Privacy and Policy', '私隐及政策'];
+        var t58 = ['Refund policy', '退款政策'];
+
+        var t61 = ['Experience', '经验'];
+        var t62 = ['Beach', '海滩'];
+        var t63 = ['Adventure', '冒险'];
+        var t64 = ['Wildlife', '野生动物'];
+        var t65 = ['Honeymoon', '蜜月'];
+        var t66 = ['Nature', '自然'];
+        var t67 = ['Party', '聚会'];
+
+        var t71 = ['Have a Questions?', '有问题?'];
+        var t72 = ['Beijing University of Technology, Beijing, China', '北京工业大学，中国北京'];
+
+
+        var toggle = document.getElementsByClassName("toggle")[0];
+        toggle.onclick  = function(){
+            (lang_flag === 0) ? (lang_flag = 1) : (lang_flag = 0)  //三元运算符
+            toggleLan();
+        }
+
+        function toggleLan() {
+            console.log(button[lang_flag]);
+            document.getElementById("button").innerHTML = button[lang_flag]
+            document.getElementById("home").innerHTML = home[lang_flag]
+            document.getElementById("about").innerHTML = about[lang_flag]
+            document.getElementById("place").innerHTML = place[lang_flag]
+            document.getElementById("hotel").innerHTML = hotel[lang_flag]
+            document.getElementById("calendar").innerHTML = calendar[lang_flag]
+            document.getElementById("contact").innerHTML = contact[lang_flag]
+            document.getElementById("blog").innerHTML = blog[lang_flag]
+            document.getElementById("home1").innerHTML = home1[lang_flag]
+            document.getElementById("about1").innerHTML = about1[lang_flag]
+            document.getElementById("aboutus").innerHTML = aboutus[lang_flag]
+            document.getElementById("one").innerHTML = one[lang_flag]
+            document.getElementById("two").innerHTML = two[lang_flag]
+            document.getElementById("three").innerHTML = three[lang_flag]
+
+            document.getElementById("text1").innerHTML = text1[lang_flag]
+            document.getElementById("tag1").innerHTML = tag1[lang_flag]
+            document.getElementById("tag2").innerHTML = tag2[lang_flag]
+            document.getElementById("tag3").innerHTML = tag3[lang_flag]
+            document.getElementById("tag4").innerHTML = tag4[lang_flag]
+            document.getElementById("title2").innerHTML = title2[lang_flag]
+            document.getElementById("text2").innerHTML = text2[lang_flag]
+            document.getElementById("title3").innerHTML = title3[lang_flag]
+            document.getElementById("text3").innerHTML = text3[lang_flag]
+            document.getElementById("comment1").innerHTML = comment1[lang_flag]
+            document.getElementById("from1").innerHTML = from1[lang_flag]
+
+            document.getElementById("comment2").innerHTML = comment2[lang_flag]
+            document.getElementById("from2").innerHTML = from2[lang_flag]
+            document.getElementById("tag11").innerHTML = tag11[lang_flag]
+            document.getElementById("text11").innerHTML = text11[lang_flag]
+            document.getElementById("tag12").innerHTML = tag12[lang_flag]
+            document.getElementById("text12").innerHTML = text12[lang_flag]
+            document.getElementById("tag13").innerHTML = tag13[lang_flag]
+            document.getElementById("text13").innerHTML = text13[lang_flag]
+            document.getElementById("tag14").innerHTML = tag14[lang_flag]
+            document.getElementById("text14").innerHTML = text14[lang_flag]
+
+            document.getElementById("t31").innerHTML = t31[lang_flag]
+            document.getElementById("t32").innerHTML = t32[lang_flag]
+            document.getElementById("t41").innerHTML = t41[lang_flag]
+            document.getElementById("t42").innerHTML = t42[lang_flag]
+
+            document.getElementById("t51").innerHTML = t51[lang_flag]
+            document.getElementById("t52").innerHTML = t52[lang_flag]
+            document.getElementById("t53").innerHTML = t53[lang_flag]
+            document.getElementById("t54").innerHTML = t54[lang_flag]
+            document.getElementById("t55").innerHTML = t55[lang_flag]
+            document.getElementById("t56").innerHTML = t56[lang_flag]
+            document.getElementById("t57").innerHTML = t57[lang_flag]
+            document.getElementById("t58").innerHTML = t58[lang_flag]
+
+            document.getElementById("t61").innerHTML = t61[lang_flag]
+            document.getElementById("t62").innerHTML = t62[lang_flag]
+            document.getElementById("t63").innerHTML = t63[lang_flag]
+            document.getElementById("t64").innerHTML = t64[lang_flag]
+            document.getElementById("t65").innerHTML = t65[lang_flag]
+            document.getElementById("t66").innerHTML = t66[lang_flag]
+            document.getElementById("t67").innerHTML = t67[lang_flag]
+
+            document.getElementById("t71").innerHTML = t71[lang_flag]
+            document.getElementById("t72").innerHTML = t72[lang_flag]
+
+
+
+        }
+    </script>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <script src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/popper.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.easing.1.3.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.waypoints.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.stellar.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/aos.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.animateNumber.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/bootstrap-datepicker.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.timepicker.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/scrollax.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/google-map.js')}}"></script>
+<script src="{{ url_for('static',filename='js/main.js')}}"></script>
+
+    
+  </body>
+</html>

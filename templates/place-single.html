@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/open-iconic-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/aos.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/ionicons.min.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='href="css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/jquery.timepicker.css') }}">
+
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+      <style>
+        .bar li {width: 100px;height: 30px; text-align: center; line-height: 30px; transition: 0.3s;}
+        .bar li:hover{background-color: #ccc;}
+        .toggle{position: absolute; top: 50px; right: 50px;}
+    </style>
+  </head>
+  <body>
+
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+             <button type="button" class="toggle" id="button">English</button>
+	      <a class="navbar-brand" href="{{ url_for('index') }}">Oliveira</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link" id="home">Home</a></li>
+	          <li class="nav-item"><a href="{{ url_for('about') }}"  class="nav-link" id="about">About</a></li>
+	          <li class="nav-item active"><a href="{{ url_for('place') }}" class="nav-link" id="place">Places</a></li>
+	          <li class="nav-item"><a href="{{ url_for('hotel') }}" class="nav-link" id="hotel">Hotels</a></li>
+	          <li class="nav-item"><a href="{{ url_for('blog') }}" class="nav-link" id="calendar">Calendar</a></li>
+	          <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link" id="contact">Contact</a></li>
+              <li class="nav-item"><a href="{{ url_for('indexz') }}" class="nav-link" id="blog">+Blog</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <div class="hero-wrap js-fullheight" style="background-image: url('/static/images/bg_1.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="{{ url_for('index') }}" id="t11">Home</a></span> <span id="t12">Places</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{{ place.name }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<section class="ftco-section ftco-degree-bg">
+      <div class="container">
+        <div class="row">
+        	<div class="col-lg-3 sidebar">
+
+        		<div class="sidebar-wrap ftco-animate">
+        			<h3 class="heading mb-4" id="t21">Star Rating</h3>
+        			<form method="post" class="star-rating">
+							  <div class="form-check">
+									<input type="checkbox" class="form-check-input" id="exampleCheck1">
+									<label class="form-check-label" for="exampleCheck1">
+										<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p>
+									</label>
+							  </div>
+							  <div class="form-check">
+						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+						      <label class="form-check-label" for="exampleCheck1">
+						    	   <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></span></p>
+						      </label>
+							  </div>
+							  <div class="form-check">
+						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+						      <label class="form-check-label" for="exampleCheck1">
+						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+						     </label>
+							  </div>
+							  <div class="form-check">
+							    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+						      <label class="form-check-label" for="exampleCheck1">
+						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+						      </label>
+							  </div>
+							  <div class="form-check">
+						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+						      <label class="form-check-label" for="exampleCheck1">
+						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
+							    </label>
+							  </div>
+							</form>
+        		</div>
+          </div>
+          <div class="col-lg-9">
+          	<div class="row">
+          		<div class="col-md-12 ftco-animate">
+          			<div class="single-slider owl-carousel">
+          				<div class="item">
+          					<div class="hotel-img" style="background-image: url('/static/images/{{ place.path }}.jpg');"></div>
+          				</div>
+          				<div class="item">
+          					<div class="hotel-img" style="background-image: url('/static/images/hotel-3.jpg');"></div>
+          				</div>
+          				<div class="item">
+          					<div class="hotel-img" style="background-image: url('/static/images/hotel-4.jpg');"></div>
+          				</div>
+          			</div>
+          		</div>
+          		<div class="col-md-12 hotel-single mt-4 mb-5 ftco-animate">
+          			<span>One ticket price: ${{ place.price }}</span>
+          			<h2>{{ place.name }}</h2>
+          			<p class="rate mb-5">
+          				<span class="loc"><a href="#"><i class="icon-map"></i> Have a good trip!!!!!</a></span>
+
+    						</p>
+    						<p>{{ place.content }}</p>
+
+
+          		</div>
+
+	<h3 class="text-center slideanim">Map</h2>
+	<div class="container">
+		<div class="row">
+            <div class="col-md-8 col-xs-12 slideanim">
+                <iframe class="googlemaps" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d380510.6741687111!2d-88.01234121699822!3d41.83390417061058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1455598377120" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+          		<div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
+          			<h4 class="mb-5" id="t22">Booking</h4>
+          			<div class="fields">
+          				<div class="row">
+
+
+          		<form action="{{ url_for('add_bookP') }}" method="post" class="p-5 bg-light">
+                  <div class="form-group">
+                    <label for="message" id="t23">Full name</label>
+                      <input name='name' id="message" cols="30" rows="10" class="form-control" type="text" class="form-control" placeholder="Please fill in">
+                      <input type="hidden" name="place_id" value="{{ place.id }}">
+
+                  </div>
+
+
+
+
+					<div class="form-group">
+                    <label for="num" id="t24">Number of tickets to be booked</label>
+                      <input name='num' id="num" cols="30" rows="10" class="form-control" type="text" class="form-control" placeholder="Please fill in">
+
+                  </div>
+
+
+                    	<div class="form-group">
+                    <label for="num" id="t25">From</label>
+                      <input name='Fr' id="Fr" cols="30" rows="10" class="form-control" type="text" class="form-control" placeholder="Your city">
+
+                  </div>
+
+
+                    	<div class="form-group">
+                    <label for="num" id="t26">To</label>
+                      <input name='To' id="To" cols="30" rows="10" class="form-control" type="text" class="form-control" placeholder="Destination">
+
+                  </div>
+
+
+              		<div class="form-field">
+                                    	<label for="Date" id="t27">Date</label>
+	              					<div class="icon"><span class="icon-map-marker"></span></div>
+					                <input name='Date' id="Date" type="text" class="form-control checkin_date" placeholder="Date">
+					              </div>
+
+
+
+
+                  <div class="form-group" style="margin-top: 20px">
+                      <button class="btn py-3 px-4 btn-primary" id="t28">Book</button>
+                  </div>
+                </form>
+
+
+
+			              </div>
+
+		              </div>
+		            </div>
+          		</div>
+
+
+
+          	</div>
+          </div> <!-- .col-md-8 -->
+        </div>
+      </div>
+    </section> <!-- .section -->
+
+		<section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+              <h2 id="t31">Subcribe to our Newsletter</h2>
+              <p id="t32">By choosing us, you can enjoy professional and convenient travel planning services.</p>
+              <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-8">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <input type="submit" value="Subscribe" class="submit px-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2" id="t41">Adventure</h2>
+              <p id="t42">Travel,in my opinion is a very useful exercise,the mind constantly in the implementation of new activities of the unknown.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2" id="t51">Information</h2>
+              <ul class="list-unstyled">
+                <li><a href="{{ url_for('about') }}" class="py-2 d-block" id="t52">About Us</a></li>
+                <li><a href="#" class="py-2 d-block" id="t53">Online enquiry</a></li>
+                <li><a href="#" class="py-2 d-block" id="t54">Call Us</a></li>
+                <li><a href="#" class="py-2 d-block" id="t55">General enquiries</a></li>
+                <li><a href="#" class="py-2 d-block" id="t56">Booking Conditions</a></li>
+                <li><a href="#" class="py-2 d-block" id="t57">Privacy and Policy</a></li>
+                <li><a href="#" class="py-2 d-block" id="t58">Refund policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2" id="t61">Experience</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block" id="t62">Beach</a></li>
+                <li><a href="#" class="py-2 d-block" id="t63">Adventure</a></li>
+                <li><a href="#" class="py-2 d-block" id="t64">Wildlife</a></li>
+                <li><a href="#" class="py-2 d-block" id="t65">Honeymoon</a></li>
+                <li><a href="#" class="py-2 d-block" id="t66">Nature</a></li>
+                <li><a href="#" class="py-2 d-block" id="t67">Party</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2" id="t71">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text" id="t72">Beijing University of Technology, Beijing, China</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+86 1392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">groupoliveira@cudconnect.ie</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+       <script>
+        var lang_flag = 0;   //lang_flag 作为语言类型的标识，0代表中文，1代表英语
+        var button = ['English', '中文'];
+        var home = ['Home', '主页'];
+        var about = ['About', '关于'];
+        var place = ['Places', '地点'];
+        var hotel = ['Hotels', '酒店'];
+        var calendar = ['Calendar', '日历'];
+        var contact = ['Contact', '联系我们'];
+        var blog = ['+Blog', '+博客'];
+
+        var t11 = ['Home', '主页'];
+        var t12 = ['places', '地点'];
+
+        var t21 = ['STAR RATING', '星级评价'];
+        var t22 = ['Booking', '预定'];
+        var t23 = ['Full name', '姓名'];
+        var t24 = ['Number of tickets to be booked', '需要预订的票数'];
+        var t25 = ['From', '出发地'];
+        var t26 = ['To', '目的地'];
+        var t27 = ['Date', '日期'];
+        var t28 = ['Book', '预定'];
+
+        var t31 = ['Subcribe to our Newsletter', '订阅我们的时事通讯'];
+        var t32 = ['By choosing us, you can enjoy professional and convenient travel planning services.', '选择我们，您将享受到专业便捷的旅游规划服务。'];
+
+        var t41 = ['Adventure', '冒险'];
+        var t42 = ['Travel,in my opinion is a very useful exercise,the mind constantly in the implementation of new activities of the unknown.', '旅行，在我看来是一种非常有益的锻炼，使心灵不断地在实施新的未知活动。'];
+
+        var t51 = ['Information', '信息'];
+        var t52 = ['About Us', '关于我们'];
+        var t53 = ['Online enquiry', '在线查询'];
+        var t54 = ['Call Us', '打电话给我们'];
+        var t55 = ['General enquiries', '一般的询问'];
+        var t56 = ['Booking Conditions', '预订情况'];
+        var t57 = ['Privacy and Policy', '私隐及政策'];
+        var t58 = ['Refund policy', '退款政策'];
+
+        var t61 = ['Experience', '经验'];
+        var t62 = ['Beach', '海滩'];
+        var t63 = ['Adventure', '冒险'];
+        var t64 = ['Wildlife', '野生动物'];
+        var t65 = ['Honeymoon', '蜜月'];
+        var t66 = ['Nature', '自然'];
+        var t67 = ['Party', '聚会'];
+
+        var t71 = ['Have a Questions?', '有问题?'];
+        var t72 = ['Beijing University of Technology, Beijing, China', '北京工业大学，中国北京'];
+
+        var toggle = document.getElementsByClassName("toggle")[0];
+        toggle.onclick  = function(){
+            (lang_flag === 0) ? (lang_flag = 1) : (lang_flag = 0)  //三元运算符
+            toggleLan();
+        }
+
+        function toggleLan() {
+            console.log(button[lang_flag]);
+            document.getElementById("button").innerHTML = button[lang_flag]
+            document.getElementById("home").innerHTML = home[lang_flag]
+            document.getElementById("about").innerHTML = about[lang_flag]
+            document.getElementById("place").innerHTML = place[lang_flag]
+            document.getElementById("hotel").innerHTML = hotel[lang_flag]
+            document.getElementById("calendar").innerHTML = calendar[lang_flag]
+            document.getElementById("contact").innerHTML = contact[lang_flag]
+            document.getElementById("blog").innerHTML = blog[lang_flag]
+
+            document.getElementById("t11").innerHTML = t11[lang_flag]
+            document.getElementById("t12").innerHTML = t12[lang_flag]
+
+            document.getElementById("t21").innerHTML = t21[lang_flag]
+            document.getElementById("t22").innerHTML = t22[lang_flag]
+            document.getElementById("t23").innerHTML = t23[lang_flag]
+            document.getElementById("t24").innerHTML = t24[lang_flag]
+            document.getElementById("t25").innerHTML = t25[lang_flag]
+            document.getElementById("t26").innerHTML = t26[lang_flag]
+            document.getElementById("t27").innerHTML = t27[lang_flag]
+            document.getElementById("t28").innerHTML = t28[lang_flag]
+
+
+
+
+            document.getElementById("t31").innerHTML = t31[lang_flag]
+            document.getElementById("t32").innerHTML = t32[lang_flag]
+            document.getElementById("t41").innerHTML = t41[lang_flag]
+            document.getElementById("t42").innerHTML = t42[lang_flag]
+
+            document.getElementById("t51").innerHTML = t51[lang_flag]
+            document.getElementById("t52").innerHTML = t52[lang_flag]
+            document.getElementById("t53").innerHTML = t53[lang_flag]
+            document.getElementById("t54").innerHTML = t54[lang_flag]
+            document.getElementById("t55").innerHTML = t55[lang_flag]
+            document.getElementById("t56").innerHTML = t56[lang_flag]
+            document.getElementById("t57").innerHTML = t57[lang_flag]
+            document.getElementById("t58").innerHTML = t58[lang_flag]
+
+            document.getElementById("t61").innerHTML = t61[lang_flag]
+            document.getElementById("t62").innerHTML = t62[lang_flag]
+            document.getElementById("t63").innerHTML = t63[lang_flag]
+            document.getElementById("t64").innerHTML = t64[lang_flag]
+            document.getElementById("t65").innerHTML = t65[lang_flag]
+            document.getElementById("t66").innerHTML = t66[lang_flag]
+            document.getElementById("t67").innerHTML = t67[lang_flag]
+
+            document.getElementById("t71").innerHTML = t71[lang_flag]
+            document.getElementById("t72").innerHTML = t72[lang_flag]
+                }
+    </script>
+
+  <script src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/popper.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.easing.1.3.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.waypoints.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.stellar.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/aos.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.animateNumber.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/bootstrap-datepicker.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.timepicker.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/scrollax.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/google-map.js')}}"></script>
+<script src="{{ url_for('static',filename='js/main.js')}}"></script>
+
+  </body>
+</html>

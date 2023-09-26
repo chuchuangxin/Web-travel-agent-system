@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <script  src="{{ url_for('static',filename='js/three.min.js')}}"></script>
+
+ <script type="text/javascript "src="{{ url_for('static',filename='js/panolens.min.js')}}"></script>
+
+<style >
+body{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 98%;
+		height: 98%;
+	}
+#panolens-div{
+		width: 100%;
+		height:100%;
+	}
+</style>
+</head>
+
+<body >
+<div id="panolens-div"></div>
+<script type="text/javascript">
+		let panolens_image = new PANOLENS.ImagePanorama('/static/images/1.jpg'); //图片路径
+		let viewer = new PANOLENS.Viewer({ // 创建全景查看器
+		  container: document.querySelector('#panolens-div'),
+		});
+		viewer.add(panolens_image ); // 将图片添加的查看器
+</script>
+
+</body>
+</html>

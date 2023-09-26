@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login&Register</title>
+	<meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../static/css/login.css">
+
+      <link rel="stylesheet" href="/static/css/Bootstrap/Bootstrap_3.4.1.css">
+  <script src="/static/js/Ajax_3.6.1.js"></script>
+  <script src="/static/css/Bootstrap/bootStrap.min.js"></script>
+  <style>
+        .bar li {width: 100px;height: 30px; text-align: center; line-height: 30px; transition: 0.3s;}
+        .bar li:hover{background-color: #ccc;}
+        .toggle{position: absolute; top: 50px; right: 50px;}
+    </style>
+</head>
+<body>
+
+
+
+<section class="user">
+<div class="container" style="position: absolute; top: 0">
+  <button type="button" class="toggle" id="button">English</button>
+              {% with messages=get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+
+              {% for category,message in messages %}
+                  <div class="alert alert-{{ category }} alert-dismissible fade in" >
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                      <span>{{ message }}</span>>
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+            {% endfor %}
+          {% endif %}
+          {% endwith %}
+
+          </div>
+
+  <div class="user_options-container">
+    <div class="user_options-text">
+      <div class="user_options-unregistered">
+        <h2 class="user_unregistered-title" id="t11">Don't have an account?</h2>
+        <p class="user_unregistered-text" id="t12">Click the signup button to register a new account.</p>
+        <button class="user_unregistered-signup" id="signup-button">Sign up</button>
+      </div>
+
+      <div class="user_options-registered">
+        <h2 class="user_registered-title" id="t21">Have an account?</h2>
+        <p class="user_registered-text" id="t22">Click the login button to log in.</p>
+        <button class="user_registered-login" id="login-button">Login</button>
+      </div>
+    </div>
+
+    <div class="user_options-forms" id="user_options-forms">
+      <div class="user_forms-login">
+        <h2 class="forms_title" id="t31">User Login</h2>
+        <form class="forms_form" action="/login" method="post">
+          <fieldset class="forms_fieldset">
+            <div class="forms_field">
+              <input type="email" placeholder="Email" class="forms_field-input" required autofocus name="telephone"/>
+            </div>
+            <div class="forms_field">
+              <input type="password" placeholder="Password" class="forms_field-input" required name="password"/>
+            </div>
+          </fieldset>
+          <div class="forms_buttons">
+              <a href="/success/{{ visitor }}">
+
+              </a>
+            <input type="submit" value="Log In" class="forms_buttons-action">
+          </div>
+        </form>
+      </div>
+      <div class="user_forms-signup">
+        <h2 class="forms_title" id="t33">User Sign Up</h2>
+        <form class="forms_form" action="/regist" method="post">
+          <fieldset class="forms_fieldset">
+            <div class="forms_field">
+              <input type="text" placeholder="Full Name" class="forms_field-input" required  name="username"/>
+            </div>
+            <div class="forms_field">
+              <input type="email" placeholder="Email" class="forms_field-input" required name="telephone"/>
+            </div>
+            <div class="forms_field">
+              <input type="password" placeholder="Password" class="forms_field-input" required name="password1"/>
+            </div>
+          </fieldset>
+          <div class="forms_buttons">
+            <input type="submit" value="Sign up" class="forms_buttons-action">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+        var lang_flag = 0;   //lang_flag 作为语言类型的标识，0代表中文，1代表英语
+        var button = ['English', '中文'];
+
+        var t11 = ['Don\'t have an account?', '没有账户?'];
+        var t12 = ['Click the signup button to register a new account.', '点击注册按钮注册一个新帐户。'];
+        var t13 = ['SIGN UP', '注册'];
+
+        var t21 = ['Have an account?', '有账户?'];
+        var t22 = ['Click the login button to log in.', '点击登录按钮进行登录。'];
+        var t23 = ['LOGIN', '登录'];
+
+        var t31 = ['User Login', '用户登录'];
+        var t32 = ['As Visitor', '游客模式'];
+        var t33 = ['User Sign Up', '用户注册']
+
+        var toggle = document.getElementsByClassName("toggle")[0];
+        toggle.onclick  = function(){
+            (lang_flag === 0) ? (lang_flag = 1) : (lang_flag = 0)  //三元运算符
+            toggleLan();
+        }
+
+        function toggleLan() {
+            console.log(button[lang_flag]);
+            document.getElementById("button").innerHTML = button[lang_flag]
+
+            document.getElementById("t11").innerHTML = t11[lang_flag]
+            document.getElementById("t12").innerHTML = t12[lang_flag]
+            document.getElementById("signup-button").innerHTML = t13[lang_flag]
+
+            document.getElementById("t21").innerHTML = t21[lang_flag]
+            document.getElementById("t22").innerHTML = t22[lang_flag]
+            document.getElementById("login-button").innerHTML = t23[lang_flag]
+
+            document.getElementById("t31").innerHTML = t31[lang_flag]
+            document.getElementById("t32").innerHTML = t32[lang_flag]
+            document.getElementById("t33").innerHTML = t33[lang_flag]
+                }
+    </script>
+
+
+    <script src="../static/js/login_js.js"></script>
+
+</section>
+
+</body>
+</html>

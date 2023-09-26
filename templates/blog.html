@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/open-iconic-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/aos.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/ionicons.min.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='href="css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/jquery.timepicker.css') }}">
+
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styleA.css') }}">
+
+
+     <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap/CSS.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/get.css') }}">
+ <script src="{{ url_for('static',filename='java/get.js')}}"></script>
+
+      <style>
+        .bar li {width: 100px;height: 30px; text-align: center; line-height: 30px; transition: 0.3s;}
+        .bar li:hover{background-color: #ccc;}
+        .toggle{position: absolute; top: 50px; right: 50px;}
+    </style>
+  </head>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+            <button type="button" class="toggle" id="button">English</button>
+	      <a class="navbar-brand" href="{{ url_for('index') }}">Oliveira</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav" >
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="{{ url_for('index') }}" class="nav-link" id="home">Home</a></li>
+	          <li class="nav-item"><a href="{{ url_for('about') }}"  class="nav-link" id="about">About</a></li>
+	          <li class="nav-item"><a href="{{ url_for('place') }}" class="nav-link" id="place">Places</a></li>
+	          <li class="nav-item"><a href="{{ url_for('hotel') }}" class="nav-link" id="hotel">Hotels</a></li>
+	          <li class="nav-item active"><a href="{{ url_for('blog') }}" class="nav-link" id="calendar">Calendar</a></li>
+	          <li class="nav-item"><a href="{{ url_for('contact') }}" class="nav-link" id="contact">Contact</a></li>
+              <li class="nav-item"><a href="{{ url_for('indexz') }}" class="nav-link" id="blog">+Blog</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+
+
+
+
+
+
+
+
+  <br><br><br>
+    <div class="calendar" style="margin-bottom: 300px">
+  <div class="header">
+    <a data-action="prev-month" href="javascript:void(0)" title="Previous Month"><i></i></a>
+    <div class="text" data-render="month-year"></div>
+    <a data-action="next-month" href="javascript:void(0)" title="Next Month"><i></i></a>
+  </div>
+  <div class="months" data-flow="left">
+    <div class="month month-a">
+      <div class="render render-a"></div>
+    </div>
+    <div class="month month-b">
+      <div class="render render-b"></div>
+    </div>
+  </div>
+</div>
+<script src="../static/java/get.js">
+
+
+
+    </script>
+
+
+      <script>
+        var lang_flag = 0;   //lang_flag 作为语言类型的标识，0代表中文，1代表英语
+        var button = ['English', '中文'];
+        var home = ['Home', '主页'];
+        var about = ['About', '关于'];
+        var place = ['Places', '地点'];
+        var hotel = ['Hotels', '酒店'];
+        var calendar = ['Calendar', '日历'];
+        var contact = ['Contact', '联系我们'];
+        var blog = ['+Blog', '+博客'];
+
+        var toggle = document.getElementsByClassName("toggle")[0];
+        toggle.onclick  = function(){
+            (lang_flag === 0) ? (lang_flag = 1) : (lang_flag = 0)  //三元运算符
+            toggleLan();
+        }
+
+        function toggleLan() {
+            console.log(button[lang_flag]);
+            document.getElementById("button").innerHTML = button[lang_flag]
+            document.getElementById("home").innerHTML = home[lang_flag]
+            document.getElementById("about").innerHTML = about[lang_flag]
+            document.getElementById("place").innerHTML = place[lang_flag]
+            document.getElementById("hotel").innerHTML = hotel[lang_flag]
+            document.getElementById("calendar").innerHTML = calendar[lang_flag]
+            document.getElementById("contact").innerHTML = contact[lang_flag]
+            document.getElementById("blog").innerHTML = blog[lang_flag]
+                }
+    </script>
+
+
+
+
+
+
+
+
+
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/popper.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.easing.1.3.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.waypoints.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.stellar.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/aos.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.animateNumber.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/bootstrap-datepicker.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.timepicker.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/scrollax.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/google-map.js')}}"></script>
+<script src="{{ url_for('static',filename='js/main.js')}}"></script>
+    
+  </body>
+</html>

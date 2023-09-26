@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/open-iconic-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/aos.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/ionicons.min.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='href="css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/jquery.timepicker.css') }}">
+
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+
+
+    <style>
+        .bar li {width: 100px;height: 30px; text-align: center; line-height: 30px; transition: 0.3s;}
+        .bar li:hover{background-color: #ccc;}
+        .toggle{position: absolute; top: 50px; right: 50px;}
+    </style>
+
+
+  </head>
+  <body>
+
+
+
+    <div class="hero-wrap js-fullheight" style="background-image: url('static/images/bg_10.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+          <button type="button" class="toggle" id="button">English</button>
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2" id="quality"><a>Quality</a></span>
+              <span id="convenient">Convenient</span>
+              <span style="margin-left: 5px" id="efficiency">Efficiency</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" id="title">Welcome to oliveira!</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END nav -->
+
+
+
+
+
+    <section class="ftco-section bg-light" >
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate" style="margin-right: 50px">
+            <div class="blog-entry align-self-stretch">
+              <a href="{{ url_for('login') }}" class="block-20" style="background-image: url('/static/images/image_1.jpg');">
+              </a>
+              <div class="text">
+              	<span class="tag" id="tag1">User login</span>
+                <h3 class="heading mt-3"><a href="#" id="userlogin">Login interface for user! ! ! ! ! !    </a></h3>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex ftco-animate"style="margin-left: 300px">
+            <div class="blog-entry align-self-stretch">
+              <a href="{{ url_for('ADMINlogin') }}" class="block-20" style="background-image: url('static/images/image_3.jpg');">
+              </a>
+              <div class="text">
+              	<span class="tag" id="tag2">Admin login</span>
+                <h3 class="heading mt-3"><a href="#" id="adminlogin">Login interface for admin! ! ! ! ! !    </a></h3>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <script>
+        var lang_flag = 0;   //lang_flag 作为语言类型的标识，0代表中文，1代表英语
+        var title = ['Welcome to oliveira!', '欢迎来到oliveira！'];
+        var button = ['English', '中文'];
+        var quality = ['Quality', '质量'];
+        var convenient = ['Convenient', '便捷'];
+        var efficiency = ['Efficiency', '效率'];
+        var userlogin = ['Login interface for user! ! ! ! ! ! ', '用户登录界面! ! ! ! ! !'];
+        var adminlogin = ['Login interface for admin! ! ! ! ! ! ', '管理员登录界面! ! ! ! ! !'];
+        var tag1 = ['User login', '用户登录'];
+        var tag2 = ['Admin login', '管理员登录'];
+
+        var toggle = document.getElementsByClassName("toggle")[0];
+        toggle.onclick  = function(){
+            (lang_flag === 0) ? (lang_flag = 1) : (lang_flag = 0)  //三元运算符
+            toggleLan();
+        }
+
+        function toggleLan() {
+            console.log(button[lang_flag]);
+            document.getElementById("button").innerHTML = button[lang_flag]
+          document.getElementById("title").innerHTML = title[lang_flag]
+          document.getElementById("quality").innerHTML = quality[lang_flag]
+          document.getElementById("convenient").innerHTML = convenient[lang_flag]
+          document.getElementById("efficiency").innerHTML = efficiency[lang_flag]
+          document.getElementById("userlogin").innerHTML = userlogin[lang_flag]
+          document.getElementById("adminlogin").innerHTML = adminlogin[lang_flag]
+          document.getElementById("tag1").innerHTML = tag1[lang_flag]
+          document.getElementById("tag2").innerHTML = tag2[lang_flag]
+        }
+    </script>
+
+
+
+
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/popper.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/bootstrap.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.easing.1.3.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.waypoints.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.stellar.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/aos.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.animateNumber.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/bootstrap-datepicker.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/jquery.timepicker.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/scrollax.min.js')}}"></script>
+      <script src="{{ url_for('static',filename='js/google-map.js')}}"></script>
+<script src="{{ url_for('static',filename='js/main.js')}}"></script>
+
+  </body>
+</html>

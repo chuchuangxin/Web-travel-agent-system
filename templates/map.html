@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"/>
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Milestone">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Milestone">
+
+    <meta name="theme-color" content="#4C7FF0">
+
+    <title>Milestone - Bootstrap 4 Dashboard Template</title>
+
+    <!-- page stylesheets -->
+    <link rel="stylesheet" href="vendor/bower-jvectormap/jquery-jvectormap-1.2.2.css">
+    <!-- end page stylesheets -->
+
+    <!-- build:css({.tmp,app}) styles/app.min.css -->
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="vendor/pace/themes/blue/pace-theme-minimal.css"/>
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="vendor/animate.css/animate.css"/>
+    <link rel="stylesheet" href="styles/app.css" id="load_styles_before"/>
+    <link rel="stylesheet" href="styles/app.skins.css"/>
+    <!-- endbuild -->
+
+
+
+
+	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='vendor/bootstrap/dist/css/bootstrap.css') }}">
+<link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='vendor/pace/themes/blue/pace-theme-minimal.css') }}">
+	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='vendor/font-awesome/css/font-awesome.css') }}">
+      <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='vendor/animate.css/animate.css') }}">
+	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='styles/app.css') }}">
+<link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='styles/app.skins.css') }}">
+	  <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='vendor/bower-jvectormap/jquery-jvectormap-1.2.2.css') }}">
+  </head>
+  <body bgcolor="#f0f8ff">
+
+    <div  class="fill-container world-map">
+      <!--sidebar panel-->
+
+
+        <!-- main area -->
+        <div class="fill-container world-map">
+
+          </div>
+          <!-- /bottom footer -->
+        </div>
+        <!-- /main area -->
+
+      <!-- /content panel -->
+
+
+
+    </div>
+
+    <script type="text/javascript">
+      window.paceOptions = {
+        document: true,
+        eventLag: true,
+        restartOnPushState: true,
+        restartOnRequestAfter: true,
+        ajax: {
+          trackMethods: [ 'POST','GET']
+        }
+      };
+    </script>
+
+    <!-- build:js({.tmp,app}) scripts/app.min.js -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/pace/pace.js"></script>
+    <script src="vendor/tether/dist/js/tether.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="vendor/fastclick/lib/fastclick.js"></script>
+    <script src="scripts/constants.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- page scripts -->
+    <script src="vendor/bower-jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="data/maps/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="data/maps/gdp-data.js"></script>
+    <!-- end page scripts -->
+
+    <!-- initialize page scripts -->
+    <script src="scripts/maps/jvector.js"></script>
+    <!-- end initialize page scripts -->
+
+        <script src="{{ url_for('static',filename='vendor/jquery/dist/jquery.js')}}"></script>
+      <script src="{{ url_for('static',filename='vendor/pace/pace.js')}}"></script>
+      <script src="{{ url_for('static',filename='vendor/tether/dist/js/tether.js')}}"></script>
+      <script src="{{ url_for('static',filename='vendor/bootstrap/dist/js/bootstrap.js')}}"></script>
+      <script src="{{ url_for('static',filename='vendor/fastclick/lib/fastclick.js')}}"></script>
+      <script src="{{ url_for('static',filename='scripts/constants.js')}}"></script>
+      <script src="{{ url_for('static',filename='scripts/main.js')}}"></script>
+      <script src="{{ url_for('static',filename='vendor/bower-jvectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
+<script src="{{ url_for('static',filename='data/maps/jquery-jvectormap-world-mill-en.js')}}"></script>
+
+<script src="{{ url_for('static',filename='data/maps/gdp-data.js')}}"></script>
+  <script src="{{ url_for('static',filename='scripts/maps/jvector.js')}}"></script>
+
+  </body>
+</html>
